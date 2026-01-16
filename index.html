@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robonota Akademi | Geleceği Kodlayan Nesiller</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <nav>
             <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
                 <li><a href="#atolyeler">Atölyeler</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
@@ -29,38 +33,61 @@
     </section>
 
     <section id="hakkimizda" class="about">
-        <h2>Biz Kimiz?</h2>
-        <p>Teknolojiyi sadece tüketen değil, aynı zamanda üreten bir nesil yetiştiriyoruz. STEAM odaklı yaklaşımımızla çocuklarımızın problem çözme ve yaratıcı düşünme becerilerini destekliyoruz.</p>
+        <div class="container">
+            <h2>Biz Kimiz?</h2>
+            <p>Teknolojiyi sadece tüketen değil, aynı zamanda üreten bir nesil yetiştiriyoruz. STEAM odaklı yaklaşımımızla çocuklarımızın problem çözme, analitik düşünme ve yaratıcı üretim becerilerini destekliyoruz.</p>
+        </div>
     </section>
 
     <section id="atolyeler" class="workshops">
-        <h2>Atölyelerimiz</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Scratch</h3>
-                <p>Kendi oyunlarını geliştirerek algoritmik düşünmeyi keşfet.</p>
-            </div>
-            <div class="card">
-                <h3>LEGO SPIKE</h3>
-                <p>Robotik projelerle mühendislik dünyasına adım at.</p>
-            </div>
-            <div class="card">
-                <h3>Arduino</h3>
-                <p>Temel elektronik ve kodlama ile devreler kur.</p>
-            </div>
-            <div class="card">
-                <h3>Python</h3>
-                <p>Dünyanın en popüler diliyle gerçek kodlamayı öğren.</p>
+        <div class="container">
+            <h2>Atölyelerimiz</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=500&q=80" alt="Scratch">
+                    </div>
+                    <h3>Scratch</h3>
+                    <p>Kendi oyunlarını geliştirerek algoritmik düşünmeyi keşfet.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=500&q=80" alt="LEGO SPIKE">
+                    </div>
+                    <h3>LEGO SPIKE</h3>
+                    <p>Robotik projelerle mühendislik dünyasına adım at.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=500&q=80" alt="Arduino">
+                    </div>
+                    <h3>Arduino</h3>
+                    <p>Temel elektronik ve kodlama ile devreler kur.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80" alt="Python">
+                    </div>
+                    <h3>Python</h3>
+                    <p>Dünyanın en popüler diliyle gerçek kodlamayı öğren.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer id="iletisim">
-        <h2>İletişim</h2>
-        <p><strong>Adres:</strong> Batıkent, Ankara</p>
-        <p><strong>Telefon:</strong> 554 191 10 96</p>
-        <p>&copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.</p>
+        <div class="container">
+            <h2>İletişim</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
+            <p><i class="fas fa-phone"></i> 554 191 10 96</p>
+            <p class="copyright">&copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.</p>
+        </div>
     </footer>
+
+    <a href="https://wa.me/905541911096?text=Merhaba, Robonota Akademi eğitimleri hakkında bilgi alabilir miyim?" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp ile Sorun</span>
+    </a>
 
 </body>
 </html>
