@@ -3,90 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robonota Akademi | Geleceği Kodlayan Nesiller</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Robonota Akademi | Robotik Kodlama ve Müzik Atölyesi</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <nav>
+    <nav class="navbar">
+        <div class="container">
             <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
             <ul class="nav-links">
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#atolyeler">Atölyeler</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#robotics">Robotik Kodlama</a></li>
+                <li><a href="#music">Müzik Atölyesi</a></li>
+                <li><a href="#contact">İletişim</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="container">
+            <h1>Geleceğin Mühendisleri ve Sanatçıları Burada Yetişiyor</h1>
+            <p>Teknolojiyle üreten, sanatla büyüyen bir nesil için Robonota Akademi yanınızda.</p>
+            <div class="hero-btns">
+                <a href="#robotics" class="btn btn-primary">Robotik Kodlamayı Keşfet</a>
+                <a href="#music" class="btn btn-secondary">Müzik Eğitimlerini Gör</a>
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Geleceği Kodlayan Nesiller ROBONOTA AKADEMİ’de Yetişiyor!</h1>
-            <p>Ankara Batıkent’te, 6-14 yaş arası mucitler için teknoloji ve üretim merkezi.</p>
-            <a href="tel:05541911096" class="btn">Hemen Bilgi Al</a>
-        </div>
-    </section>
-
-    <section id="hakkimizda" class="about">
+    <section id="robotics" class="section">
         <div class="container">
-            <h2>Biz Kimiz?</h2>
-            <p>Teknolojiyi sadece tüketen değil, aynı zamanda üreten bir nesil yetiştiriyoruz. STEAM odaklı yaklaşımımızla çocuklarımızın problem çözme, analitik düşünme ve yaratıcı üretim becerilerini destekliyoruz.</p>
-        </div>
-    </section>
-
-    <section id="atolyeler" class="workshops">
-        <div class="container">
-            <h2>Atölyelerimiz</h2>
-            <div class="card-container">
+            <h2 class="section-title">Robotik Kodlama Atölyesi</h2>
+            <p class="section-subtitle">5-14 Yaş Grubu | 3-4 Kişilik Butik Gruplar | Haftada 1 Saat</p>
+            <div class="grid">
                 <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=500&q=80" alt="Scratch">
-                    </div>
-                    <h3>Scratch</h3>
-                    <p>Kendi oyunlarını geliştirerek algoritmik düşünmeyi keşfet.</p>
+                    <i class="fas fa-robot"></i>
+                    <h3>LEGO Projeleri</h3>
+                    <p>LEGO eğitim setleri ile mekanik ve mühendislik temellerini eğlenerek öğreniyoruz.</p>
                 </div>
                 <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=500&q=80" alt="LEGO SPIKE">
-                    </div>
-                    <h3>LEGO SPIKE</h3>
-                    <p>Robotik projelerle mühendislik dünyasına adım at.</p>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=500&q=80" alt="Arduino">
-                    </div>
+                    <i class="fas fa-microchip"></i>
                     <h3>Arduino</h3>
-                    <p>Temel elektronik ve kodlama ile devreler kur.</p>
+                    <p>Elektronik devreler tasarlıyor, gerçek dünyadaki sorunlara teknolojik çözümler üretiyoruz.</p>
                 </div>
                 <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80" alt="Python">
-                    </div>
-                    <h3>Python</h3>
-                    <p>Dünyanın en popüler diliyle gerçek kodlamayı öğren.</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobil Uygulama & Oyun</h3>
+                    <p>Kendi oyunlarımızı ve mobil uygulamalarımızı tasarlayarak yazılım dünyasına giriyoruz.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="iletisim">
+    <section id="music" class="section bg-light">
         <div class="container">
-            <h2>İletişim</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
-            <p><i class="fas fa-phone"></i> 554 191 10 96</p>
-            <p class="copyright">&copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.</p>
+            <h2 class="section-title">Müzik Atölyesi</h2>
+            <p class="section-subtitle">Birebir Özel Dersler | Haftada 1 Saat | Sanatla Gelişim</p>
+            <div class="music-grid">
+                <div class="music-item">
+                    <ul>
+                        <li><i class="fas fa-music"></i> Piyano</li>
+                        <li><i class="fas fa-music"></i> Gitar</li>
+                        <li><i class="fas fa-music"></i> Keman</li>
+                    </ul>
+                </div>
+                <div class="music-item">
+                    <ul>
+                        <li><i class="fas fa-music"></i> Klarnet</li>
+                        <li><i class="fas fa-music"></i> Saz</li>
+                        <li><i class="fas fa-music"></i> Yan Flüt</li>
+                    </ul>
+                </div>
+                <div class="music-item highlight">
+                    <h3>Konservatuvar Hazırlık</h3>
+                    <p>Akademik müzik kariyeri hedefleyen öğrencilerimiz için profesyonel sınav hazırlığı.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container text-center">
+            <h3>Bize Katılın</h3>
+            <p>Ankara'daki merkezimizde sizleri bekliyoruz.</p>
+            <div class="footer-info">
+                <span><i class="fas fa-phone"></i> +90 5xx xxx xx xx</span>
+                <span><i class="fas fa-map-marker-alt"></i> Ankara, Türkiye</span>
+            </div>
+            <p class="copy">&copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/905541911096?text=Merhaba, Robonota Akademi eğitimleri hakkında bilgi alabilir miyim?" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/905XXXXXXXXX" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp ile Sorun</span>
+        <span>Hemen Bilgi Alın</span>
     </a>
 
 </body>

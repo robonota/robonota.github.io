@@ -1,4 +1,4 @@
-/* Genel Ayarlar */
+/* Temel Ayarlar */
 * {
     margin: 0;
     padding: 0;
@@ -9,38 +9,35 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    scroll-behavior: smooth;
 }
 
 .container {
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 /* Navigasyon */
-header {
-    background: #2c3e50;
-    color: #fff;
-    padding: 15px 0;
+.navbar {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-nav {
+.navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 24px;
     font-weight: 700;
+    color: #2c3e50;
 }
 
 .logo span {
@@ -48,8 +45,8 @@ nav {
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
+    display: flex;
 }
 
 .nav-links li {
@@ -57,9 +54,9 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
     text-decoration: none;
-    font-weight: 400;
+    color: #333;
+    font-weight: 600;
     transition: 0.3s;
 }
 
@@ -69,155 +66,109 @@ nav {
 
 /* Hero Bölümü */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    height: 80vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
     color: #fff;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    padding: 0 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
 }
 
 .btn {
-    display: inline-block;
-    background: #e67e22;
-    color: #fff;
-    padding: 12px 35px;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: 0.4s;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 10px;
 }
 
-.btn:hover {
-    background: #d35400;
-    transform: scale(1.05);
-}
+.btn-primary { background: #e67e22; color: #fff; }
+.btn-secondary { background: #3498db; color: #fff; }
+.btn:hover { opacity: 0.8; transform: translateY(-3px); }
 
-/* Bölüm Başlıkları */
-section {
-    padding: 60px 0;
-}
+/* Bölüm Stilleri */
+.section { padding: 80px 0; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+.section-subtitle { text-align: center; color: #7f8c8d; margin-bottom: 50px; }
+.bg-light { background: #f9f9f9; }
 
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: #2c3e50;
-}
-
-/* Atölye Kartları */
-.card-container {
+/* Grid Yapısı */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .card {
     background: #fff;
+    padding: 30px;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.card:hover { transform: translateY(-10px); }
+.card i { font-size: 50px; color: #e67e22; margin-bottom: 20px; }
+
+/* Müzik Bölümü */
+.music-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-.card-img {
-    height: 200px;
-    overflow: hidden;
-}
-
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.5s;
-}
-
-.card:hover .card-img img {
-    transform: scale(1.1);
-}
-
-.card h3 {
-    padding: 15px 20px 5px;
-}
-
-.card p {
-    padding: 0 20px 20px;
-    font-size: 0.9rem;
-    color: #666;
-}
+.music-item ul { list-style: none; }
+.music-item li { font-size: 1.2rem; margin-bottom: 10px; font-weight: 600; }
+.music-item i { color: #3498db; margin-right: 10px; }
+.highlight { border-left: 4px solid #e67e22; padding-left: 20px; max-width: 300px; }
 
 /* Footer */
-footer {
-    background: #2c3e50;
-    color: #fff;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.copyright {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    opacity: 0.7;
-}
+footer { background: #2c3e50; color: #fff; padding: 50px 0; }
+.footer-info { margin: 20px 0; }
+.footer-info span { margin: 0 20px; }
+.copy { font-size: 0.8rem; margin-top: 30px; opacity: 0.6; }
 
 /* WhatsApp Butonu */
-.whatsapp-btn {
+.whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
-    color: white;
-    padding: 12px 25px;
+    color: #FFF;
+    padding: 10px 20px;
     border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 10px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
     z-index: 1000;
     transition: 0.3s;
 }
 
-.whatsapp-btn:hover {
-    background-color: #128c7e;
-    transform: scale(1.05);
-}
+.whatsapp-float:hover { background-color: #128c7e; }
+.whatsapp-float i { font-size: 24px; margin-right: 10px; }
 
-/* --- MOBİL UYUMLULUK (RESPONSIVE) --- */
+/* Mobil Uyumluluk */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-    .nav-links {
-        margin-top: 15px;
-    }
-    .nav-links li {
-        margin: 0 10px;
-    }
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .whatsapp-btn span {
-        display: none; /* Mobilde yazıyı gizle, sadece ikon kalsın */
-    }
-    .whatsapp-btn {
-        padding: 15px;
-    }
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2rem; }
 }
