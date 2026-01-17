@@ -2,181 +2,92 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Robonota | Geleceği Tasarlayan Nesiller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robonota Akademi | Geleceği Kodlayan Nesiller</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="container nav-container">
-            <a href="#" class="logo">ROBONOTA</a>
+    <header>
+        <nav>
+            <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
             <ul class="nav-links">
-                <li><a href="#robotik">Teknoloji</a></li>
-                <li><a href="#muzik">Sanat</a></li>
-                <li><a href="#fiyat">Ücretlendirme</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#atolyeler">Atölyeler</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container">
-            <span class="eyebrow">ANKARA BATIKENT</span>
-            <h1>Zekayı kodla.<br>Ruhu özgür bırak.</h1>
-            <p>Teknoloji ve müziğin buluştuğu en saf nokta. Çocuğunuzun potansiyelini butik sınıflarda keşfedin.</p>
-        </div>
+        </nav>
     </header>
 
-    <section id="robotik" class="container section-padding">
-        <div class="section-label">01 / Robotik Kodlama</div>
-        <div class="main-grid">
-            <div class="card" onclick="openModal('lego')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?q=80&w=1000" alt="Lego">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Geleceği Kodlayan Nesiller ROBONOTA AKADEMİ’de Yetişiyor!</h1>
+            <p>Ankara Batıkent’te, 6-14 yaş arası mucitler için teknoloji ve üretim merkezi.</p>
+            <a href="tel:05541911096" class="btn">Hemen Bilgi Al</a>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="about">
+        <div class="container">
+            <h2>Biz Kimiz?</h2>
+            <p>Teknolojiyi sadece tüketen değil, aynı zamanda üreten bir nesil yetiştiriyoruz. STEAM odaklı yaklaşımımızla çocuklarımızın problem çözme, analitik düşünme ve yaratıcı üretim becerilerini destekliyoruz.</p>
+        </div>
+    </section>
+
+    <section id="atolyeler" class="workshops">
+        <div class="container">
+            <h2>Atölyelerimiz</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=500&q=80" alt="Scratch">
+                    </div>
+                    <h3>Scratch</h3>
+                    <p>Kendi oyunlarını geliştirerek algoritmik düşünmeyi keşfet.</p>
                 </div>
-                <div class="card-meta">
-                    <h3>LEGO® Projeleri</h3>
-                    <span>Keşfet <i class="fas fa-arrow-right"></i></span>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=500&q=80" alt="LEGO SPIKE">
+                    </div>
+                    <h3>LEGO SPIKE</h3>
+                    <p>Robotik projelerle mühendislik dünyasına adım at.</p>
                 </div>
-            </div>
-            <div class="card" onclick="openModal('arduino')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?q=80&w=1000" alt="Arduino">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=500&q=80" alt="Arduino">
+                    </div>
+                    <h3>Arduino</h3>
+                    <p>Temel elektronik ve kodlama ile devreler kur.</p>
                 </div>
-                <div class="card-meta">
-                    <h3>Arduino Excellence</h3>
-                    <span>Keşfet <i class="fas fa-arrow-right"></i></span>
-                </div>
-            </div>
-            <div class="card" onclick="openModal('mobil')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1000" alt="App Design">
-                </div>
-                <div class="card-meta">
-                    <h3>Mobil Oyun Tasarımı</h3>
-                    <span>Keşfet <i class="fas fa-arrow-right"></i></span>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80" alt="Python">
+                    </div>
+                    <h3>Python</h3>
+                    <p>Dünyanın en popüler diliyle gerçek kodlamayı öğren.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="muzik" class="container section-padding">
-        <div class="section-label">02 / Müzik Atölyesi</div>
-        <div class="main-grid">
-            <div class="card" onclick="openModal('piyano')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1000" alt="Piyano">
-                </div>
-                <div class="card-meta"><h3>Piyano</h3><span>Bireysel Ders</span></div>
-            </div>
-            <div class="card" onclick="openModal('gitar')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=1000" alt="Gitar">
-                </div>
-                <div class="card-meta"><h3>Gitar</h3><span>Bireysel Ders</span></div>
-            </div>
-            <div class="card" onclick="openModal('keman')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?q=80&w=1000" alt="Keman">
-                </div>
-                <div class="card-meta"><h3>Keman</h3><span>Bireysel Ders</span></div>
-            </div>
-            <div class="card" onclick="openModal('saz')">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=1000" alt="Bağlama">
-                </div>
-                <div class="card-meta"><h3>Bağlama (Saz)</h3><span>Bireysel Ders</span></div>
-            </div>
+    <footer id="iletisim">
+        <div class="container">
+            <h2>İletişim</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
+            <p><i class="fas fa-phone"></i> 554 191 10 96</p>
+            <p class="copyright">&copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.</p>
         </div>
-    </section>
+    </footer>
 
-    <section id="fiyat" class="bg-dark text-white">
-        <div class="container section-padding">
-            <div class="section-label">03 / Ücretlendirme</div>
-            <div class="price-box">
-                <div class="p-item">
-                    <h4>Standart Üyelik</h4>
-                    <p>Haftalık 1, Aylık 4 Ders</p>
-                    <div class="cost">4.250 ₺</div>
-                </div>
-                <div class="p-item highlight">
-                    <h4>Avantajlı Paket</h4>
-                    <p>Kardeş veya Çift Branş</p>
-                    <div class="cost">7.500 ₺</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a href="https://wa.me/905541911096?text=Merhaba, Robonota Akademi eğitimleri hakkında bilgi alabilir miyim?" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp ile Sorun</span>
+    </a>
 
-    <section id="iletisim" class="container section-padding">
-        <div class="section-label">04 / Lokasyon</div>
-        <div class="contact-grid">
-            <div class="map-box">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.240366601445!2d32.7303028!3d39.9547547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3a282c6af8617%3A0xd2829e7dfe45ed57!2sRobotik%20Kodlama%20At%C3%B6lyesi%20%26%20M%C3%BCzik%20At%C3%B6lyesi%20ROBONOTA%20AKADEM%C4%B0!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <div class="info-box">
-                <p>Batıkent, Ankara<br><strong>0554 191 10 96</strong></p>
-                <a href="https://wa.me/905541911096" class="wa-btn">Bize Yazın</a>
-            </div>
-        </div>
-    </section>
-
-    <div id="modal-container" class="modal-overlay" onclick="closeModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div id="modal-body">
-                </div>
-        </div>
-    </div>
-
-    <script>
-        const content = {
-            lego: {
-                t: "LEGO® Projeleri Atölyesi",
-                p: "Küçük parçaların devasa fikirlere dönüştüğü bu atölyede, 5-14 yaş arası çocuklarımız mühendislik dünyasına adım atıyor. LEGO Education setleri kullanarak mekanik yapıları inşa ediyor ve blok kodlama ile bu yapılara can veriyoruz. Problem çözme becerisini oyunla birleştiren bu süreçte, çocuklarımız sadece talimatları izlemiyor, kendi robotik çözümlerini üretiyorlar. 3-4 kişilik butik sınıflarımızda her öğrencimiz, teknolojiyi tüketen değil üreten birer mucit olma yolunda ilerliyor."
-            },
-            arduino: {
-                t: "Arduino Excellence",
-                p: "Kodların fiziksel dünyayla dansına tanık olun. Arduino atölyemizde öğrencilerimiz gerçek devreler kurarak sensörleri, motorları ve elektronik bileşenleri programlamayı öğreniyor. Kendi akıllı sistemlerini tasarlayan çocuklarımız, yazılım ve donanımın nasıl bir bütün oluşturduğunu somut projelerle kavrıyor. Analitik zekayı ve dikkati zirveye taşıyan bu eğitim, geleceğin mühendisleri için Batıkent'teki en güçlü temeldir."
-            },
-            mobil: {
-                t: "Mobil Oyun & Uygulama Tasarımı",
-                p: "Çocuğunuzun ekran başında geçirdiği vakti en değerli yatırıma dönüştürüyoruz. Bu atölyede öğrencilerimiz sadece oyun oynamayı değil, bir oyunun arkasındaki algoritmayı ve tasarım süreçlerini öğreniyor. Karakter oluşturmadan seviye tasarımına kadar her aşamada bizzat üretim yaparak kendi mobil oyunlarını hayata geçiriyorlar. Dijital okuryazarlığı ve üretkenliği odağına alan bu program, geleceğin yazılım dünyasında söz sahibi olacak nesiller yetiştiriyor."
-            },
-            piyano: {
-                t: "Piyano Atölyesi",
-                p: "Matematik ve sanatın mükemmel dengesini tuşlarda keşfedin. Birebir gerçekleştirilen piyano derslerimizde, her öğrencimizin sağ-sol beyin koordinasyonunu ve odaklanma yeteneğini en üst seviyeye çıkarıyoruz. Nota bilgisini sıkıcı bir ders olmaktan çıkarıp, duyguların ifade edildiği büyülü bir dile dönüştürüyoruz. Usta eğitmenlerimizin rehberliğinde haftada bir saatlik bu özel serüven, çocuğunuzun hayat boyu taşıyacağı en asil yeteneği haline gelecek."
-            },
-            gitar: {
-                t: "Gitar Atölyesi",
-                p: "Her ritimde yeni bir özgüven inşa ediyoruz. Gitar eğitimlerimizde temel tekniklerden akorlara, popüler ezgilerden klasik eserlere uzanan keyifli bir yol haritası izliyoruz. Bireysel ders yapımız sayesinde öğrencimizin müzikal zevkini ve yeteneğini en doğru hızda geliştiriyoruz. Gitar çalmak, çocuğunuz için sadece bir hobi değil, kendini ifade edebildiği ve sosyal becerilerini güçlendirdiği bir yaşam biçimi olacak."
-            },
-            keman: {
-                t: "Keman Atölyesi",
-                p: "Disiplin ve zarafetin en saf halini kemanın telleriyle tanıştırın. Keman derslerimizde kusursuz bir kulak eğitimi ve duruş tekniği üzerine yoğunlaşarak, bu asil enstrümanın tüm inceliklerini öğretiyoruz. Sabır ve odaklanma gerektiren bu süreç, öğrencimizin akademik başarısına ve karakter gelişimine doğrudan katkı sağlıyor. Müziğin en zarif sesiyle çocuğunuzun hayatında kalıcı ve estetik bir iz bırakmak için buradayız."
-            },
-            saz: {
-                t: "Bağlama (Saz) Atölyesi",
-                p: "Kültürel mirasımızı parmak uçlarında yaşatmak isteyen genç yetenekler için bir köprü kuruyoruz. Saz atölyemizde Anadolu'nun bin yıllık hikayelerini, modern bir eğitim yaklaşımıyla çocuklarımıza sevdirerek öğretiyoruz. Birebir derslerimizde tezene vuruşlarından makamlara kadar milli enstrümanımızın tüm derinliğini işliyoruz. Çocuğunuzun bu toprakların ezgilerini kendi parmaklarıyla canlandırması, ona tarifsiz bir aidiyet duygusu ve sanatsal derinlik katacaktır."
-            }
-        };
-
-        function openModal(id) {
-            const m = document.getElementById('modal-container');
-            const body = document.getElementById('modal-body');
-            body.innerHTML = `<h2>${content[id].t}</h2><p>${content[id].p}</p>`;
-            m.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('modal-container').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    </script>
 </body>
 </html>
