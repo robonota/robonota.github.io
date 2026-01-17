@@ -2,10 +2,10 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robonota Akademi | Teknoloji ve Sanatın Kurumsal Adresi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Robonota Akademi | Technology & Art Excellence</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,149 +13,163 @@
 
     <header>
         <nav class="container">
-            <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
-            <ul class="nav-links">
-                <li><a href="#robotik">Robotik Kodlama</a></li>
-                <li><a href="#muzik">Müzik Atölyesi</a></li>
-                <li><a href="#fiyatlar">Ücretlendirme</a></li>
-                <li><a href="#iletisim" class="nav-btn">İletişim</a></li>
-            </ul>
+            <div class="logo">ROBONOTA<span>.</span></div>
+            <div class="nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="#robotik">Teknoloji</a></li>
+                    <li><a href="#muzik">Sanat</a></li>
+                    <li><a href="#fiyatlar">Üyelik</a></li>
+                </ul>
+                <a href="tel:05541911096" class="contact-cta">BİZE ULAŞIN</a>
+            </div>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content container">
-            <span class="hero-tag">Ankara Batıkent'te Yeni Nesil Eğitim</span>
-            <h1>Teknoloji ile Üretin, <br>Müzik ile İlham Verin</h1>
-            <p>Çocuklar ve gençler için disiplinler arası, profesyonel bir gelişim merkezi.</p>
-            <div class="hero-actions">
-                <a href="#robotik" class="main-btn">Eğitimlerimizi İnceleyin</a>
-                <a href="https://wa.me/905541911096" class="secondary-btn">WhatsApp Danışmanlık</a>
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-text-box">
+                <span class="eyebrow">ANKARA'NIN EN SEÇKİN AKADEMİSİ</span>
+                <h1>Zekayı Kodla,<br><em>Ruhu Özgür Bırak.</em></h1>
+                <p>Geleceğin dünyasını inşa eden teknoloji ve müziğin asaletini birleştiren, Batıkent'in imza eğitim merkezi.</p>
+                <div class="hero-btns">
+                    <a href="#robotik" class="btn-gold">Eğitimleri Keşfet</a>
+                    <a href="#iletisim" class="btn-outline">Lokasyon</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item"><strong>500+</strong><span>Aktif Öğrenci</span></div>
+                <div class="stat-item"><strong>15+</strong><span>Uzman Eğitmen</span></div>
             </div>
         </div>
     </section>
 
     <section id="robotik" class="section-padding">
         <div class="container">
-            <div class="section-header">
+            <div class="section-title-wrapper">
+                <span class="title-sub">ENGINEERING & CODING</span>
                 <h2>Robotik Kodlama Atölyesi</h2>
-                <div class="divider"></div>
-                <p>5-14 yaş grubu için 3-4 kişilik butik sınıflarda teknoloji odaklı gelişim.</p>
             </div>
-            <div class="course-grid">
-                <div class="modern-card" onclick="openModal('modal-lego')">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?auto=format&fit=crop&w=600&q=80" alt="LEGO">
+            
+            <div class="premium-grid">
+                <div class="p-card" onclick="openModal('modal-lego')">
+                    <div class="p-card-img">
+                        <img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?auto=format&fit=crop&w=800&q=80" alt="Lego">
                     </div>
-                    <div class="card-body">
-                        <h3>LEGO Projeleri</h3>
-                        <p>Mühendislik temelleri ve blok kodlama eğitimi.</p>
-                        <span class="read-more">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-                <div class="modern-card" onclick="openModal('modal-arduino')">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=600&q=80" alt="Arduino">
-                    </div>
-                    <div class="card-body">
-                        <h3>Arduino & Elektronik</h3>
-                        <p>Gerçek devre tasarımları ve mikrodenetleyici kodlama.</p>
-                        <span class="read-more">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    <div class="p-card-info">
+                        <h3>LEGO® Robotics</h3>
+                        <p>Analitik düşüncenin fiziksel dünyayla buluştuğu nokta.</p>
+                        <div class="p-card-tag">5-14 YAŞ</div>
                     </div>
                 </div>
-                <div class="modern-card" onclick="openModal('modal-mobil')">
-                    <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" alt="Mobil Oyun">
+                <div class="p-card" onclick="openModal('modal-arduino')">
+                    <div class="p-card-img">
+                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=800&q=80" alt="Arduino">
                     </div>
-                    <div class="card-body">
-                        <h3>Mobil Oyun Tasarımı</h3>
-                        <p>Kendi dijital dünyalarını inşa etme becerisi.</p>
-                        <span class="read-more">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    <div class="p-card-info">
+                        <h3>Arduino Excellence</h3>
+                        <p>Elektronik ve yazılımın kalbine profesyonel bir yolculuk.</p>
+                        <div class="p-card-tag">İLERİ SEVİYE</div>
+                    </div>
+                </div>
+                <div class="p-card" onclick="openModal('modal-mobil')">
+                    <div class="p-card-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80" alt="Mobile Game">
+                    </div>
+                    <div class="p-card-info">
+                        <h3>App & Game Design</h3>
+                        <p>Kendi dijital evrenlerini tasarlayan üretken nesiller.</p>
+                        <div class="p-card-tag">YAZILIM</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="muzik" class="section-padding bg-soft">
+    <section id="muzik" class="section-padding bg-dark">
         <div class="container">
-            <div class="section-header">
-                <h2>Müzik Atölyesi</h2>
-                <div class="divider"></div>
-                <p>Usta eğitmenlerle haftada bir saat, tamamen bireysel (özel) dersler.</p>
+            <div class="section-title-wrapper">
+                <span class="title-sub">FINE ARTS & MUSIC</span>
+                <h2 class="text-white">Bireysel Müzik Atölyesi</h2>
             </div>
-            <div class="music-gallery">
-                <div class="music-item" onclick="openModal('modal-piyano')">
-                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=400&q=80">
-                    <div class="overlay"><h3>Piyano</h3></div>
+            
+            <div class="music-marquee">
+                <div class="m-box" onclick="openModal('modal-piyano')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=600&q=80">
+                    <div class="m-box-content"><h3>Piyano</h3></div>
                 </div>
-                <div class="music-item" onclick="openModal('modal-gitar')">
-                    <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=400&q=80">
-                    <div class="overlay"><h3>Gitar</h3></div>
+                <div class="m-box" onclick="openModal('modal-gitar')">
+                    <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=600&q=80">
+                    <div class="m-box-content"><h3>Gitar</h3></div>
                 </div>
-                <div class="music-item" onclick="openModal('modal-keman')">
-                    <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=400&q=80">
-                    <div class="overlay"><h3>Keman</h3></div>
+                <div class="m-box" onclick="openModal('modal-keman')">
+                    <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=600&q=80">
+                    <div class="m-box-content"><h3>Keman</h3></div>
                 </div>
-                <div class="music-item" onclick="openModal('modal-klarnet')">
-                    <img src="https://images.unsplash.com/photo-1576097451760-328b59e28851?auto=format&fit=crop&w=400&q=80">
-                    <div class="overlay"><h3>Klarnet / Flüt</h3></div>
-                </div>
-                <div class="music-item" onclick="openModal('modal-saz')">
-                    <img src="https://images.unsplash.com/photo-1602531370904-61878a97f7a6?auto=format&fit=crop&w=400&q=80">
-                    <div class="overlay"><h3>Saz</h3></div>
-                </div>
-                <div class="music-item highlight" onclick="openModal('modal-konservatuvar')">
-                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=400&q=80">
-                    <div class="overlay"><h3>Konservatuvar</h3></div>
+                <div class="m-box" onclick="openModal('modal-saz')">
+                    <img src="https://images.unsplash.com/photo-1602531370904-61878a97f7a6?auto=format&fit=crop&w=600&q=80">
+                    <div class="m-box-content"><h3>Bağlama</h3></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="fiyatlar" class="section-padding">
+    <section id="fiyatlar" class="section-padding bg-cream">
         <div class="container">
-            <div class="section-header">
-                <h2>Ücretlendirme</h2>
-                <div class="divider"></div>
+            <div class="price-header text-center">
+                <h2>Üyelik & Kayıt</h2>
+                <p>Değerli vaktiniz ve çocuğunuzun gelişimi için şeffaf bir yatırım planı.</p>
             </div>
-            <div class="price-box-wrapper">
-                <div class="price-box">
-                    <div class="p-head">
-                        <h3>Tek Branş Eğitim</h3>
-                        <p>Haftada 1, Ayda 4 Ders</p>
+            <div class="price-premium-wrapper">
+                <div class="price-feature-card">
+                    <div class="pf-header">
+                        <h3>Aylık Eğitim</h3>
+                        <div class="pf-amount">4.250 ₺ <span>/ 4 Ders</span></div>
                     </div>
-                    <div class="p-value">4.250 ₺ <span>/ aylık</span></div>
+                    <div class="pf-body">
+                        <p>Tüm branşlarda geçerli bireysel veya butik grup eğitimi.</p>
+                    </div>
                 </div>
-                <div class="price-box featured">
-                    <div class="p-head">
-                        <h3>Avantajlı Paket</h3>
-                        <p>Çift Branş veya Kardeş İndirimi</p>
+                <div class="price-feature-card dark">
+                    <div class="pf-header">
+                        <h3>Aile & Çoklu Program</h3>
+                        <div class="pf-amount">7.500 ₺ <span>/ 8 Ders</span></div>
                     </div>
-                    <div class="p-value">7.500 ₺ <span>/ aylık</span></div>
-                    <div class="p-note">1.000 ₺ Tasarruf Sağlar</div>
+                    <div class="pf-body">
+                        <p>Kardeş indirimi veya çift branş tercihleri için özel avantajlı üyelik.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="iletisim" class="section-padding bg-dark">
-        <div class="container contact-content">
-            <div class="map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.123!2d32.7!3d39.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU0JzAwLjAiTiAzMsKwNDInMDAuMCJF!5e0!3m2!1str!2str!4v1" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <footer id="iletisim">
+        <div class="container footer-grid">
+            <div class="f-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.540161427188!2d32.72398507662544!3d39.99636618111956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40829882c6af8717%3A0xd2829e7d7e45ed57!2sRobotik%20Kodlama%20At%C3%B6lyesi%20%26%20M%C3%BCzik%20At%C3%B6lyesi%20ROBONOTA%20AKADEM%C4%B0!5e0!3m2!1str!2str!4v1700000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="contact-details">
-                <h2>İletişim Bilgileri</h2>
-                <div class="c-item"><i class="fas fa-phone"></i> 554 191 10 96</div>
-                <div class="c-item"><i class="fas fa-map-marker-alt"></i> Turgut Özal Mah. Batıkent, Ankara</div>
-                <div class="c-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/905541911096" style="color:#fff; text-decoration:none;">WhatsApp Destek</a></div>
+            <div class="f-contact">
+                <div class="logo">ROBONOTA<span>.</span></div>
+                <div class="contact-list">
+                    <div class="c-l-item"><span>Adres</span><p>Turgut Özal Mah. 2177. Cad. Ankira1 Sitesi No:35/A, Batıkent</p></div>
+                    <div class="c-l-item"><span>İletişim</span><p>0554 191 10 96</p></div>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Robonota Excellence Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    <div id="modal-lego" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-lego')">×</span><img src="https://images.unsplash.com/photo-1589254066213-a0c9dc853574?auto=format&fit=crop&w=1000&q=80"><h2>LEGO Projeleri</h2><p>LEGO parçalarının sadece birer oyuncak olmadığını, mühendisliğin ilk adımları olduğunu keşfetmeye hazır mısınız? 5-14 yaş arası çocuklarımız, bu atölyede mekanik parçaları birleştirerek hayallerindeki robotları inşa ediyor. Blok tabanlı kodlama ile bu robotlara hareket veriyor, sensörleri kullanarak labirentlerden çıkmasını sağlıyoruz. 3-4 kişilik butik gruplarımızda her çocuk, problem çözme ve stratejik düşünme becerilerini en üst seviyeye taşıyor. Çocuğunuzun teknolojiyle olan ilişkisini tüketen değil, üreten bir boyuta taşımak için bu serüvene davetlisiniz!</p></div></div>
+    <a href="https://wa.me/905541911096" class="wa-premium" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>CANLI DESTEK</span>
+    </a>
+
+    <div id="modal-lego" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-lego')">×</span><img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?auto=format&fit=crop&w=1200&q=80"><h2>LEGO® Robotics Atölyesi</h2><p>5-14 yaş arası mucitler için mühendislik disipliniyle harmanlanmış bir teknoloji deneyimi...</p></div></div>
+
     <script>
-        function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
+        function openModal(id) { document.getElementById(id).style.display = "flex"; document.body.style.overflow = "hidden"; }
         function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
         window.onclick = function(e) { if(e.target.className === 'modal') { e.target.style.display = 'none'; document.body.style.overflow = 'auto'; } }
     </script>
