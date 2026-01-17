@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robonota Akademi | Geleceği Kodlayan Nesiller</title>
+    <title>Robonota Akademi | Robotik Kodlama ve Müzik Atölyesi</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav>
+        <nav class="container">
             <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
             <ul class="nav-links">
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#atolyeler">Atölyeler</a></li>
+                <li><a href="#robotik">Robotik Kodlama</a></li>
+                <li><a href="#muzik">Müzik Atölyesi</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
@@ -26,67 +24,78 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Geleceği Kodlayan Nesiller ROBONOTA AKADEMİ’de Yetişiyor!</h1>
-            <p>Ankara Batıkent’te, 6-14 yaş arası mucitler için teknoloji ve üretim merkezi.</p>
-            <a href="tel:05541911096" class="btn">Hemen Bilgi Al</a>
+            <h1>Gelecek Teknolojide, Ruh Sanatta Şekillenir!</h1>
+            <p>Ankara Batıkent'te çocuklarınız için hem analitik hem de sanatsal gelişim merkezi.</p>
+            <div class="hero-btns">
+                <a href="#robotik" class="btn">Robotik Keşfet</a>
+                <a href="#muzik" class="btn btn-alt">Müziği Keşfet</a>
+            </div>
         </div>
     </section>
 
-    <section id="hakkimizda" class="about">
+    <section id="robotik" class="section-padding bg-white">
         <div class="container">
-            <h2>Biz Kimiz?</h2>
-            <p>Teknolojiyi sadece tüketen değil, aynı zamanda üreten bir nesil yetiştiriyoruz. STEAM odaklı yaklaşımımızla çocuklarımızın problem çözme, analitik düşünme ve yaratıcı üretim becerilerini destekliyoruz.</p>
-        </div>
-    </section>
-
-    <section id="atolyeler" class="workshops">
-        <div class="container">
-            <h2>Atölyelerimiz</h2>
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=500&q=80" alt="Scratch">
-                    </div>
-                    <h3>Scratch</h3>
-                    <p>Kendi oyunlarını geliştirerek algoritmik düşünmeyi keşfet.</p>
+            <div class="section-title">
+                <h2>Robotik Kodlama Atölyesi</h2>
+                <p>5-14 yaş arası çocuklar için 3-4 kişilik butik gruplarda, haftada 1 saat yoğun eğitim.</p>
+            </div>
+            <div class="grid-container">
+                <div class="info-card tech">
+                    <i class="fas fa-robot"></i>
+                    <h3>LEGO Projeleri</h3>
+                    <p>LEGO setleri ile mühendislik becerileri ve problem çözme odaklı üretim.</p>
                 </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?auto=format&fit=crop&w=500&q=80" alt="LEGO SPIKE">
-                    </div>
-                    <h3>LEGO SPIKE</h3>
-                    <p>Robotik projelerle mühendislik dünyasına adım at.</p>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?auto=format&fit=crop&w=500&q=80" alt="Arduino">
-                    </div>
+                <div class="info-card tech">
+                    <i class="fas fa-microchip"></i>
                     <h3>Arduino</h3>
-                    <p>Temel elektronik ve kodlama ile devreler kur.</p>
+                    <p>Temel elektronik ve mikrodenetleyici programlama ile gerçek devre tasarımları.</p>
                 </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80" alt="Python">
-                    </div>
-                    <h3>Python</h3>
-                    <p>Dünyanın en popüler diliyle gerçek kodlamayı öğren.</p>
+                <div class="info-card tech">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobil Uygulama & Oyun</h3>
+                    <p>Kendi mobil oyunlarını ve uygulamalarını tasarlayarak üretmeyi öğrenme.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="muzik" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Müzik Atölyesi</h2>
+                <p>Haftada 1 saat, usta eğitmenlerle birebir (özel) ders formatında müzik eğitimi.</p>
+            </div>
+            <div class="instrument-list">
+                <div class="inst-item"><i class="fas fa-music"></i> Piyano</div>
+                <div class="inst-item"><i class="fas fa-guitar"></i> Gitar</div>
+                <div class="inst-item"><i class="fas fa-wave-square"></i> Keman</div>
+                <div class="inst-item"><i class="fas fa-wind"></i> Klarnet</div>
+                <div class="inst-item"><i class="fas fa-guitar"></i> Saz (Bağlama)</div>
+                <div class="inst-item"><i class="fas fa-leaf"></i> Yan Flüt</div>
+                <div class="inst-item highlight"><i class="fas fa-university"></i> Konservatuvar Hazırlık</div>
             </div>
         </div>
     </section>
 
     <footer id="iletisim">
         <div class="container">
-            <h2>İletişim</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
-            <p><i class="fas fa-phone"></i> 554 191 10 96</p>
-            <p class="copyright">&copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.</p>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>ROBONOTA AKADEMİ</h3>
+                    <p>Teknoloji ve Sanatın Buluşma Noktası</p>
+                    <p><i class="fas fa-phone"></i> 554 191 10 96</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                &copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/905541911096?text=Merhaba, Robonota Akademi eğitimleri hakkında bilgi alabilir miyim?" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/905541911096?text=Merhaba, eğitimleriniz hakkında bilgi almak istiyorum." class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp ile Sorun</span>
+        <span>Hızlı Bilgi Al</span>
     </a>
 
 </body>
