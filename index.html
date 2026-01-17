@@ -2,11 +2,11 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Robonota Akademi | Robotik Kodlama ve Müzik Atölyesi</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,58 +15,44 @@
         <nav class="container">
             <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
             <ul class="nav-links">
-                <li><a href="#robotik">Robotik Kodlama</a></li>
-                <li><a href="#muzik">Müzik Atölyesi</a></li>
+                <li><a href="#robotik">Robotik</a></li>
+                <li><a href="#muzik">Müzik</a></li>
+                <li><a href="#fiyatlar">Fiyatlar</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Gelecek Teknolojide, Ruh Sanatta Şekillenir!</h1>
-            <p>Ankara Batıkent'te çocuklarınız için hem analitik hem de sanatsal gelişim merkezi.</p>
+            <h1>Gelecek Teknolojide, <br> Ruh Sanatta Şekillenir!</h1>
+            <p>Ankara Batıkent'te çocuklarınız için hem analitik zeka hem de sanatsal gelişim merkezi.</p>
             <div class="hero-btns">
-                <a href="#robotik" class="btn">Robotik Keşfet</a>
-                <a href="#muzik" class="btn btn-alt">Müziği Keşfet</a>
+                <a href="#robotik" class="btn btn-primary">Atölyeleri Keşfet</a>
+                <a href="tel:05541911096" class="btn btn-secondary">Hemen Ara</a>
             </div>
         </div>
     </section>
 
-    <section id="robotik" class="section-padding bg-white">
+    <section id="robotik" class="section-padding">
         <div class="container">
             <div class="section-title">
                 <h2>Robotik Kodlama Atölyesi</h2>
-                <p>5-14 yaş arası çocuklar için 3-4 kişilik butik gruplarda, haftada 1 saat yoğun eğitim.</p>
+                <p>5-14 Yaş | 3-4 Kişilik Butik Gruplar | Haftada 1 Saat</p>
             </div>
-            
-            <div class="grid-container robotik-grid">
-                <div class="workshop-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=600&q=80" alt="LEGO Robotik Kodlama">
-                    </div>
-                    <div class="card-content">
-                        <h3>LEGO Projeleri</h3>
-                        <p>LEGO setleri ile mühendislik becerileri ve problem çözme odaklı üretim.</p>
-                    </div>
+            <div class="grid-container">
+                <div class="course-card" onclick="openModal('modal-lego')">
+                    <img src="https://images.unsplash.com/photo-1589254066213-a0c9dc853574?auto=format&fit=crop&w=600&q=80">
+                    <div class="card-info"><h3>LEGO Projeleri</h3><span>Detayları Gör</span></div>
                 </div>
-                <div class="workshop-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&w=600&q=80" alt="Arduino Projeleri">
-                    </div>
-                    <div class="card-content">
-                        <h3>Arduino Projeleri</h3>
-                        <p>Temel elektronik ve mikrodenetleyici programlama ile gerçek devre tasarımları.</p>
-                    </div>
+                <div class="course-card" onclick="openModal('modal-arduino')">
+                    <img src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&w=600&q=80">
+                    <div class="card-info"><h3>Arduino & Elektronik</h3><span>Detayları Gör</span></div>
                 </div>
-                <div class="workshop-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80" alt="Mobil Oyun Tasarımı">
-                    </div>
-                    <div class="card-content">
-                        <h3>Mobil Uygulama & Oyun</h3>
-                        <p>Kendi mobil oyunlarını ve uygulamalarını tasarlayarak üretmeyi öğrenme.</p>
-                    </div>
+                <div class="course-card" onclick="openModal('modal-mobil')">
+                    <img src="https://images.unsplash.com/photo-1526498460520-4c2463391ccb?auto=format&fit=crop&w=600&q=80">
+                    <div class="card-info"><h3>Mobil Oyun Tasarımı</h3><span>Detayları Gör</span></div>
                 </div>
             </div>
         </div>
@@ -76,77 +62,111 @@
         <div class="container">
             <div class="section-title">
                 <h2>Müzik Atölyesi</h2>
-                <p>Haftada 1 saat, usta eğitmenlerle birebir (özel) ders formatında müzik eğitimi.</p>
+                <p>Bireysel (Özel) Dersler | Haftada 1 Saat</p>
             </div>
-            
             <div class="grid-container music-grid">
-                <div class="music-card">
-                    <img src="https://images.unsplash.com/photo-1552422534-a02939554a0b?auto=format&fit=crop&w=400&q=80" alt="Piyano Dersi">
-                    <div class="music-info">
-                        <h3>Piyano</h3>
-                    </div>
+                <div class="course-card mini" onclick="openModal('modal-piyano')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=400&q=80">
+                    <div class="card-info"><h3>Piyano</h3></div>
                 </div>
-                <div class="music-card">
-                    <img src="https://images.unsplash.com/photo-1485278537138-4e8911a13c02?auto=format&fit=crop&w=400&q=80" alt="Gitar Dersi">
-                    <div class="music-info">
-                        <h3>Gitar</h3>
-                    </div>
+                <div class="course-card mini" onclick="openModal('modal-gitar')">
+                    <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=400&q=80">
+                    <div class="card-info"><h3>Gitar</h3></div>
                 </div>
-                <div class="music-card">
-                    <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=400&q=80" alt="Keman Dersi">
-                    <div class="music-info">
-                        <h3>Keman</h3>
-                    </div>
+                <div class="course-card mini" onclick="openModal('modal-keman')">
+                    <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=400&q=80">
+                    <div class="card-info"><h3>Keman</h3></div>
                 </div>
-                <div class="music-card">
-                    <img src="https://images.unsplash.com/photo-1576097451760-328b59e28851?auto=format&fit=crop&w=400&q=80" alt="Klarnet Dersi">
-                    <div class="music-info">
-                        <h3>Klarnet</h3>
-                    </div>
+                <div class="course-card mini" onclick="openModal('modal-saz')">
+                    <img src="https://images.unsplash.com/photo-1602531370904-61878a97f7a6?auto=format&fit=crop&w=400&q=80">
+                    <div class="card-info"><h3>Saz (Bağlama)</h3></div>
                 </div>
-                <div class="music-card">
-                    <img src="https://images.unsplash.com/photo-1602531370904-61878a97f7a6?auto=format&fit=crop&w=400&q=80" alt="Saz Bağlama Dersi">
-                    <div class="music-info">
-                        <h3>Saz (Bağlama)</h3>
-                    </div>
+                <div class="course-card mini" onclick="openModal('modal-klarnet')">
+                    <img src="https://images.unsplash.com/photo-1576097451760-328b59e28851?auto=format&fit=crop&w=400&q=80">
+                    <div class="card-info"><h3>Klarnet / Flüt</h3></div>
                 </div>
-                <div class="music-card">
-                    <img src="https://images.unsplash.com/photo-1638907827818-5469164cb40a?auto=format&fit=crop&w=400&q=80" alt="Yan Flüt Dersi">
-                    <div class="music-info">
-                        <h3>Yan Flüt</h3>
-                    </div>
-                </div>
-                <div class="music-card highlight-card">
-                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=400&q=80" alt="Konservatuvar Hazırlık">
-                    <div class="music-info">
-                        <h3>Konservatuvar Hazırlık</h3>
-                        <span>Akademik Hedefler İçin</span>
-                    </div>
+                <div class="course-card mini highlight" onclick="openModal('modal-konservatuvar')">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=400&q=80">
+                    <div class="card-info"><h3>Konservatuvar</h3></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="iletisim">
+    <section id="fiyatlar" class="section-padding bg-price">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <h3>ROBONOTA AKADEMİ</h3>
-                    <p>Teknoloji ve Sanatın Buluşma Noktası</p>
-                    <p><i class="fas fa-phone"></i> 554 191 10 96</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
+            <div class="section-title">
+                <h2>Eğitim Ücretlerimiz</h2>
+                <p>Bütçenize uygun paketlerle kaliteli eğitimi destekliyoruz.</p>
+            </div>
+            <div class="price-container">
+                <div class="price-card">
+                    <h3>Standart Kurs</h3>
+                    <div class="amount">4.250 ₺<span> / Ay</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Herhangi Bir Branş</li>
+                        <li><i class="fas fa-check"></i> Haftada 1 Saat</li>
+                        <li><i class="fas fa-check"></i> Ayda Toplam 4 Ders</li>
+                    </ul>
+                </div>
+                <div class="price-card featured">
+                    <div class="badge">Avantajlı Paket</div>
+                    <h3>Çift Branş / Kardeş</h3>
+                    <div class="amount">7.500 ₺<span> / Ay</span></div>
+                    <div class="savings">1.000 ₺ Tasarruf!</div>
+                    <ul>
+                        <li><i class="fas fa-star"></i> 2 Branş veya 2 Kardeş</li>
+                        <li><i class="fas fa-check"></i> Ayda Toplam 8 Ders</li>
+                        <li><i class="fas fa-check"></i> Özel İndirimli Fiyat</li>
+                    </ul>
                 </div>
             </div>
-            <div class="bottom-bar">
-                &copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.
+        </div>
+    </section>
+
+    <section id="iletisim" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bize Ulaşın</h2>
+                <p>Batıkent'teki atölyemize bir kahve içmeye bekleriz.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="map-area">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.6133092284145!2d32.7000715!3d39.9942307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d39882c6af8717%3A0xd2829e7df645ed57!2sRobotik%20Kodlama%20At%C3%B6lyesi%20%26%20M%C3%BCzik%20At%C3%B6lyesi%20ROBONOTA%20AKADEM%C4%B0!5e0!3m2!1str!2str!4v1705500000000!5m2!1str!2str" width="100%" height="350" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 554 191 10 96</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Turgut Özal Mah. 2177. Cad. Ankira1 Sitesi No:35/A, Batıkent/Ankara</p>
+                    <p><i class="fas fa-envelope"></i> info@robonota.com</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <a href="https://wa.me/905541911096?text=Merhaba, eğitimleriniz hakkında bilgi almak istiyorum." class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>Hızlı Bilgi Al</span>
-    </a>
+    <div id="modal-lego" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-lego')">&times;</span><img src="https://images.unsplash.com/photo-1589254066213-a0c9dc853574?auto=format&fit=crop&w=1000&q=80"><h2>LEGO Projeleri Atölyesi</h2><p>Çocuğunuzun hayal dünyasını gerçeğe dönüştürmek artık mümkün! LEGO Education setleri ile 5-14 yaş arası minik mucitlerimiz, sadece bir şeyler inşa etmekle kalmıyor, blok tabanlı kodlama ile bu yapılara can veriyor. 3-4 kişilik özel gruplarımızda her çocuk, mühendislik prensiplerini eğlenerek öğrenirken takım çalışmasının gücünü keşfediyor. Haftada bir saatlik bu serüven, analitik düşünme ve problem çözme yeteneklerini zirveye taşıyor. Teknolojiyi tüketen değil, üreten bir nesil için en eğlenceli başlangıç burası!</p></div></div>
+    
+    <div id="modal-arduino" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-arduino')">&times;</span><img src="https://images.unsplash.com/photo-1608564697071-ddf911d81370?auto=format&fit=crop&w=1000&q=80"><h2>Arduino & Elektronik Atölyesi</h2><p>Elektronik dünyasının kapılarını aralayan bu atölyede, kablolar ve devreler artık birer karmaşa değil, birer sanat eseri! Arduino ile çocuklarımız sensörlerden motorlara, ışıklardan seslere kadar fiziksel dünyayı kodlarla kontrol etmeyi öğreniyor. Kendi akıllı sistemlerini tasarlarken mantıksal sorgulama ve algoritma kurma becerilerini gerçek hayata uyguluyorlar. 5-14 yaş grubuna özel hazırlanan müfredatımızda, teknolojinin mutfağına girerek geleceğin mühendisleri olma yolunda dev adımlar atıyorlar. Çocuğunuzun kendi icatlarını yapma tutkusuna ortak olun.</p></div></div>
 
+    <div id="modal-mobil" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-mobil')">&times;</span><img src="https://images.unsplash.com/photo-1526498460520-4c2463391ccb?auto=format&fit=crop&w=1000&q=80"><h2>Mobil Oyun & Uygulama Tasarımı</h2><p>Ekranların arkasındaki gizemli dünyayı keşfetmeye hazır mısınız? Mobil uygulama ve oyun tasarımı atölyemizde, çocuklar sadece oyun oynamayı değil, o oyunun mimarı olmayı öğreniyor. Kendi dünyalarını kurup karakterlerini yönettikleri bu süreçte, yazılım mantığını ve kullanıcı deneyimi tasarımını kavrıyorlar. Hayal güçlerini dijital bir ürüne dönüştürmek, onlara tarifsiz bir başarı duygusu ve üretim vizyonu kazandırıyor. Geleceğin dijital dünyasında söz sahibi olacak bireyler yetiştirmek için doğru adrestesiniz.</p></div></div>
+
+    <div id="modal-piyano" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-piyano')">&times;</span><img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1000&q=80"><h2>Piyano ile Müziğin Kalbi</h2><p>Siyah ve beyaz tuşların arasındaki matematiksel zarafetle tanışın. Birebir gerçekleştirilen piyano derslerimizde, her öğrencimizin kendi ritminde ve duygusunda ilerlemesini sağlıyoruz. Piyano eğitimi, sadece bir enstrüman çalmak değil; aynı zamanda sağ ve sol beyin koordinasyonunu zirveye çıkaran bir disiplindir. Haftada bir saatlik bu özel vakitte, usta eğitmenlerimizle çocuklarınız notaların büyülü dünyasında kaybolacak. Özgüven ve estetik algısını geliştiren bu yolculuk, hayat boyu sürecek bir tutkunun başlangıcı olacak.</p></div></div>
+
+    <div id="modal-gitar" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-gitar')">&times;</span><img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=1000&q=80"><h2>Gitar Atölyesi</h2><p>Tellerin titreşimiyle başlayan bu yolculuk, çocuğunuzun ruhunu sanata açıyor. Gitar atölyemizde temel tekniklerden akorlara, sevilen ezgilerden klasik eserlere uzanan geniş bir yelpazede bireysel eğitim veriyoruz. Parmak hassasiyetini ve ritim duygusunu geliştiren bu süreç, çocukların kendilerini enstrümanlarıyla ifade etmelerini sağlıyor. Sosyal becerileri güçlendiren gitar, her ortamda parlayan bir yeteneğin kapısını aralıyor. Hayallerini notalara dökmek isteyen tüm öğrencilerimizi Batıkent’teki sıcak atmosferimize bekliyoruz.</p></div></div>
+
+    <div id="modal-keman" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-keman')">&times;</span><img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=1000&q=80"><h2>Keman Atölyesi</h2><p>Kemanın asil ve buğulu sesiyle disiplini birleştirmeye ne dersiniz? Zarafetle çalınan keman derslerimizde, doğru yay tekniklerinden hassas kulak eğitimine kadar kapsamlı bir yol sunuyoruz. Birebir ders formatımızda, öğrencimizin duruşundan nota bilgisini kavrayışına kadar her detayıyla titizlikle ilgileniyoruz. Sabır ve odaklanma gerektiren bu enstrüman, çocuğunuzun odaklanma yeteneğini artırırken sanatsal bakış açısını da derinleştiriyor. Klasik müziğin büyüsünü kemanın telleriyle keşfetmek, unutulmaz bir deneyim olacak.</p></div></div>
+
+    <div id="modal-saz" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-saz')">&times;</span><img src="https://images.unsplash.com/photo-1602531370904-61878a97f7a6?auto=format&fit=crop&w=1000&q=80"><h2>Saz (Bağlama) Atölyesi</h2><p>Bin yıllık kültürümüzün sesini geleceğe taşımaya ne dersiniz? Saz atölyemizde, Anadolu’nun derin hikayelerini ve o eşsiz tınıyı çocuklara sevdirecek bir metodla sunuyoruz. Tezene vuruşlarından makamlara kadar, birebir eğitimle bu kadim enstrümanın tüm inceliklerini işliyoruz. Köklerimize bağlı kalırken sanatsal bir derinlik kazanmak, çocuklarımıza tarifsiz bir aidiyet duygusu katıyor. Müziğin bu toprak kokan yanıyla tanışan öğrencilerimiz, kültürel mirasımızı parmak uçlarında yaşatacaklar.</p></div></div>
+
+    <div id="modal-klarnet" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-klarnet')">&times;</span><img src="https://images.unsplash.com/photo-1576097451760-328b59e28851?auto=format&fit=crop&w=1000&q=80"><h2>Klarnet & Yan Flüt Atölyesi</h2><p>Nefesin sanata dönüştüğü o eşsiz anlara tanıklık edin! Üflemeli enstrüman eğitimlerimizde, doğru nefes tekniklerinden parmak hızına kadar profesyonel bir yaklaşım sergiliyoruz. Klarnetin buğulu sesi veya yan flütün berrak tınısı ile tanışan öğrencilerimiz, akciğer kapasitelerini geliştirirken müziğin büyüsüne kapılıyorlar. Birebir derslerimiz sayesinde, klasik müzikten güncel parçalara kadar her türde kendilerini ifade edebilecekleri bir yetenek kazanıyorlar. Çocuğunuzun nefesiyle sanata hayat vermesini istiyorsanız, doğru yerdesiniz.</p></div></div>
+
+    <div id="modal-konservatuvar" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal-konservatuvar')">&times;</span><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1000&q=80"><h2>Konservatuvar Hazırlık</h2><p>Müziği sadece bir hobi olarak değil, bir gelecek hedefi olarak gören yetenekli adaylarımız için profesyonel bir akademi programı sunuyoruz. İşitme, ritim, teori ve enstrüman tekniklerinin en ince detayına kadar işlendiği derslerimizde, sınav stresini başarıya dönüştürüyoruz. Usta eğitmenlerimizin tecrübesiyle hazırlanan kişiye özel çalışma planları, konservatuvar kapılarını ardına kadar aralıyor. Disiplinli ve yoğun bir tempoda, akademik müzik kariyerinin temellerini beraber atıyoruz. Çocuğunuzun hayallerindeki sanat üniversitesine giden yolda en güçlü destekçiniz ve rehberiniz biziz.</p></div></div>
+
+    <a href="https://wa.me/905541911096" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Bilgi Hattı</a>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
+        window.onclick = function(event) { if (event.target.className === 'modal') { event.target.style.display = "none"; document.body.style.overflow = "auto"; } }
+    </script>
 </body>
 </html>
