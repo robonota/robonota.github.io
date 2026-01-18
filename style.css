@@ -1,75 +1,80 @@
-/* Genel Ayarlar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* AGASYTA INSPIRED DESIGN SYSTEM */
+:root {
+    --primary: #0056b3; /* Güven veren kurumsal mavi */
+    --secondary: #ffc107; /* Dikkat çeken sarı/gold */
+    --text: #333333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --border: #e9ecef;
 }
 
-body, html {
-    height: 100%;
-    overflow: hidden; /* Kaydırma çubuğunu gizler */
-}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-/* Hero Bölümü Konumlandırma */
-.hero {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Video Stili */
-#bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Videonun ekranı tam kaplamasını sağlar */
-    z-index: -2;
-}
+/* NAV */
+header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+.nav-box { height: 80px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--primary); letter-spacing: -1px; }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 600; }
+.btn-nav { background: var(--primary); color: var(--white) !important; padding: 10px 20px; border-radius: 6px; }
 
-/* Karartma Katmanı */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Videoyu %40 oranında karartır */
-    z-index: -1;
-}
+/* HERO */
+.hero { padding: 80px 0; background: var(--white); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.hero-text h1 { font-family: 'Poppins', sans-serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; color: #1a1a1a; }
+.hero-text p { font-size: 1.2rem; color: #555; margin-bottom: 40px; }
+.hero-btns { display: flex; gap: 15px; }
+.btn-primary { background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 700; }
+.btn-secondary { border: 2px solid var(--primary); color: var(--primary); padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 700; }
+.hero-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
-/* Yazı İçeriği */
-.content h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+/* SECTIONS */
+.section-padding { padding: 100px 0; }
+.bg-light { background: var(--light-bg); }
+.section-tag { color: var(--primary); font-weight: 800; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+.section-h2 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-bottom: 40px; }
 
-.content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
+/* CARDS */
+.course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.course-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: pointer; transition: 0.3s; }
+.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.course-card img { width: 100%; height: 200px; object-fit: cover; }
+.c-body { padding: 25px; }
+.c-body h3 { font-family: 'Poppins', sans-serif; margin-bottom: 10px; }
 
-/* Buton Tasarımı */
-.btn {
-    text-decoration: none;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 30px;
-    font-size: 1.2rem;
-    transition: 0.3s;
-    border-radius: 5px;
-}
+/* VALUE PROPOSITION */
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 60px; }
+.v-item i { font-size: 3rem; color: var(--secondary); margin-bottom: 20px; }
 
-.btn:hover {
-    background-color: white;
-    color: black;
+/* PRICE */
+.price-wrapper { display: flex; justify-content: center; gap: 30px; }
+.p-card { background: var(--white); padding: 40px; border-radius: 12px; text-align: center; border: 1px solid var(--border); flex: 1; max-width: 400px; position: relative; }
+.p-card.highlighted { border: 3px solid var(--primary); }
+.p-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+.p-cost { font-size: 3rem; font-weight: 700; margin: 20px 0; color: var(--primary); }
+.p-cost span { font-size: 1rem; color: #888; }
+
+/* FOOTER */
+footer { background: #1a1a1a; color: white; padding: 80px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; }
+.f-socials i { font-size: 1.5rem; margin-right: 20px; color: var(--white); }
+.f-bottom { border-top: 1px solid #333; margin-top: 60px; padding-top: 30px; text-align: center; font-size: 0.8rem; opacity: 0.5; }
+
+/* MODAL (iOS FIX) */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-content { background: var(--white); padding: 40px; border-radius: 12px; max-width: 700px; width: 100%; position: relative; }
+.close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: #888; }
+
+/* MOBILE (iOS Standard) */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-grid { grid-template-columns: 1fr; text-align: center; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-btns { justify-content: center; }
+    .value-grid { grid-template-columns: 1fr; }
+    .price-wrapper { flex-direction: column; align-items: center; }
+    .footer-grid { grid-template-columns: 1fr; }
 }

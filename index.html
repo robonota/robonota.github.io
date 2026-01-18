@@ -2,26 +2,180 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robonota | Hoş Geldiniz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Robonota Akademi | Yaparak Öğrenme ve Sanat Merkezi</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <header>
+        <nav class="container nav-box">
+            <div class="logo">ROBONOTA</div>
+            <ul class="nav-links">
+                <li><a href="#vizyon">Vizyonumuz</a></li>
+                <li><a href="#robotik">Teknoloji</a></li>
+                <li><a href="#muzik">Sanat</a></li>
+                <li><a href="#iletisim" class="btn-nav">Bize Ulaşın</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="hero">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="video.mp4" type="video/mp4">
-            Tarayıcınız video oynatmayı desteklemiyor.
-        </video>
-
-        <div class="overlay"></div>
-
-        <div class="content">
-            <h1>Robonota'ya Hoş Geldiniz</h1>
-            <p>Hayal ettiğiniz projeler burada hayat buluyor.</p>
-            <a href="#" class="btn">Daha Fazlasını Keşfet</a>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Geleceğin dünyasını elleriyle inşa eden çocuklar.</h1>
+                <p>Batıkent'te bilim, teknoloji ve sanatın harmanlandığı, ezberden uzak, tamamen deneyim odaklı bir eğitim ekosistemi.</p>
+                <div class="hero-btns">
+                    <a href="#robotik" class="btn-primary">Programları İncele</a>
+                    <a href="https://wa.me/905541911096" class="btn-secondary">WhatsApp Destek</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1581092921461-7d157390dfd6?q=80&w=1200" alt="Learning">
+            </div>
         </div>
     </section>
 
+    <section id="vizyon" class="bg-light">
+        <div class="container section-padding text-center">
+            <div class="section-tag">NEDEN ROBONOTA?</div>
+            <h2 class="section-h2">Ezberleri Bozuyoruz</h2>
+            <div class="value-grid">
+                <div class="v-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Deneyimsel Öğrenme</h3>
+                    <p>Çocuklar teorik bilgiyi değil, bizzat dokunarak ve yaparak öğrenmenin keyfini çıkarır.</p>
+                </div>
+                <div class="v-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Butik Eğitim</h3>
+                    <p>Maksimum 3-4 kişilik sınıflarda, her çocuğun öğrenme hızına özel ilgi gösteriyoruz.</p>
+                </div>
+                <div class="v-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>STEAM Yaklaşımı</h3>
+                    <p>Bilim, teknoloji, mühendislik, sanat ve matematiği tek bir potada eritiyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="robotik" class="container section-padding">
+        <div class="section-tag">TEKNOLOJİ ATÖLYELERİ</div>
+        <h2 class="section-h2">Geleceği Kodlayan Atölyeler</h2>
+        <div class="course-grid">
+            <div class="course-card" onclick="openModal('lego')">
+                <img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=800" alt="Lego">
+                <div class="c-body">
+                    <h3>LEGO® Projeleri</h3>
+                    <p>Mekanik ve kodlamanın oyunla buluştuğu ilk adım.</p>
+                </div>
+            </div>
+            <div class="course-card" onclick="openModal('arduino')">
+                <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?q=80&w=800" alt="Arduino">
+                <div class="c-body">
+                    <h3>Arduino Excellence</h3>
+                    <p>Elektronik dünyasını gerçek devrelerle keşfedin.</p>
+                </div>
+            </div>
+            <div class="course-card" onclick="openModal('mobil')">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800" alt="Mobile">
+                <div class="c-body">
+                    <h3>Mobil Oyun Tasarımı</h3>
+                    <p>Kendi oyunlarını tasarlayan yaratıcı beyinler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="muzik" class="bg-light">
+        <div class="container section-padding">
+            <div class="section-tag">SANAT ATÖLYELERİ</div>
+            <h2 class="section-h2">Ruhu Besleyen Notalar</h2>
+            <div class="course-grid">
+                <div class="course-card" onclick="openModal('piyano')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=800" alt="Piyano">
+                    <div class="c-body"><h3>Piyano</h3><p>Matematik ve zarafetin tuşlardaki uyumu.</p></div>
+                </div>
+                <div class="course-card" onclick="openModal('gitar')">
+                    <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?q=80&w=800" alt="Gitar">
+                    <div class="c-body"><h3>Gitar</h3><p>Ritmik duyguların parmak uçlarındaki hikayesi.</p></div>
+                </div>
+                <div class="course-card" onclick="openModal('keman')">
+                    <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?q=80&w=800" alt="Keman">
+                    <div class="c-body"><h3>Keman</h3><p>Disiplin ve estetiğin asil buluşması.</p></div>
+                </div>
+                <div class="course-card" onclick="openModal('saz')">
+                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=800" alt="Saz">
+                    <div class="c-body"><h3>Bağlama (Saz)</h3><p>Kültürel mirasın en samimi ezgileri.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fiyat" class="container section-padding">
+        <div class="section-tag">ÜCRETLENDİRME</div>
+        <h2 class="section-h2">Şeffaf Eğitim Yatırımı</h2>
+        <div class="price-wrapper">
+            <div class="p-card">
+                <h3>Standart Program</h3>
+                <div class="p-cost">4.250 ₺ <span>/ 4 Ders</span></div>
+                <p>Tüm branşlarda haftada 1 saat uzman eğitimi.</p>
+            </div>
+            <div class="p-card highlighted">
+                <div class="p-badge">AVANTAJLI</div>
+                <h3>Kardeş / Çift Branş</h3>
+                <div class="p-cost">7.500 ₺ <span>/ 8 Ders</span></div>
+                <p>Gelişimi destekleyen özel aile paketi.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="f-map">
+                <iframe src="http://googleusercontent.com/maps.google.com/6" width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div id="iletisim" class="f-info">
+                <h3>ROBONOTA</h3>
+                <p>Turgut Özal Mah. 2177. Cad. Batıkent, Ankara</p>
+                <p><strong>0554 191 10 96</strong></p>
+                <div class="f-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/905541911096"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="f-bottom">© 2026 Robonota Akademi. All rights reserved.</div>
+    </footer>
+
+    <div id="modal-box" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-x" onclick="closeModal()">&times;</span>
+            <div id="modal-data"></div>
+        </div>
+    </div>
+
+    <script>
+        const data = {
+            lego: { t: "LEGO® Projeleri", p: "Küçük ellerin büyük fikirlerle buluştuğu bu atölyede, 5-14 yaş arası çocuklarımız mühendisliğin temellerini keşfediyor. LEGO Education setleri ile mekanik yapıları kurarken, blok kodlama sayesinde bu robotlara can veriyoruz. 3-4 kişilik özel gruplarımızda problem çözme yeteneği, oyunun doğal bir parçası haline geliyor. Çocuğunuzun hayal gücünü somut bir teknolojiye dönüştürdüğü bu serüvende biz rehberlik ediyoruz." },
+            arduino: { t: "Arduino Excellence", p: "Gerçek teknolojinin mutfağına girmeye hazır mısınız? Arduino atölyemizde öğrencilerimiz kablolar, sensörler ve devrelerle fiziksel dünyayı kodla kontrol etmeyi öğreniyor. Kendi akıllı sistemlerini tasarlayan çocuklarımız, yazılımın donanımla nasıl kusursuz bir şekilde birleştiğini bizzat deneyimliyor. Analitik düşünceyi ve teknik beceriyi en üst seviyeye taşıyan bu eğitim, geleceğin mühendisleri için Batıkent'teki en sağlam temeldir." },
+            mobil: { t: "Mobil Oyun & Uygulama", p: "Dijital dünyada sadece tüketici değil, üretici olma zamanı. Bu atölyede öğrencilerimiz sevilen mobil oyunların arkasındaki mantığı kavrayarak kendi oyunlarını sıfırdan tasarlıyor. Algoritma kurma, karakter yönetimi ve seviye tasarımı gibi profesyonel yazılım süreçlerini eğlenceli bir dille deneyimliyorlar. Çocuğunuzun elindeki ekranı bir üretim fabrikasına dönüştüren bu eğitim, dijital okuryazarlığın en keyifli halidir." },
+            piyano: { t: "Piyano Atölyesi", p: "Siyah ve beyaz tuşların arasındaki matematiksel ahenk, çocuğunuzun duyusal gelişimine eşsiz bir katkı sağlıyor. Birebir gerçekleştirilen piyano derslerimizde, her öğrencimizin sağ-sol beyin koordinasyonunu ve odaklanma yeteneğini geliştiriyoruz. Notaları sıkıcı bir ders değil, duyguların ifade edildiği büyülü bir dil olarak öğretiyoruz. Usta eğitmenlerimizin rehberliğinde geçen haftalık bir saatlik bu özel zaman, hayat boyu sürecek sanatsal bir derinliğin başlangıcıdır." },
+            gitar: { t: "Gitar Atölyesi", p: "Tellerin ucundaki ritmi ve armoniyi keşfetmek için doğru yerdesiniz. Gitar eğitimlerimizde temel tekniklerden akorlara, popüler ezgilerden klasik eserlere uzanan keyifli bir yol haritası izliyoruz. Bireysel ders yapımız sayesinde öğrencimizin müzikal zevkini ve enstrüman hakimiyetini en doğru hızda geliştiriyoruz. Özgüven kazandıran ve sanatsal ifadeyi güçlendiren bu süreç, çocuğunuzun hayat boyu yanından ayırmayacağı bir arkadaş kazanmasını sağlar." },
+            keman: { t: "Keman Atölyesi", p: "Disiplin, zarafet ve sabrın en güzel örneği olan keman eğitimi ile tanışın. Keman derslerimizde kusursuz bir kulak eğitimi ve duruş tekniği üzerine yoğunlaşarak, bu asil enstrümanın tüm inceliklerini öğretiyoruz. Bireysel ilgi ile her notanın hakkını veren öğrencilerimiz, akademik başarılarına da yansıyan bir odaklanma disiplini kazanıyor. Müziğin en zarif sesiyle çocuğunuzun hayatında kalıcı ve estetik bir iz bırakmak en büyük önceliğimizdir." },
+            saz: { t: "Bağlama (Saz) Atölyesi", p: "Kültürel mirasımızı modern bir yaklaşımla yeni nesillere sevdiriyoruz. Saz atölyemizde Anadolu'nun bin yıllık hikayelerini, profesyonel bir eğitim müfredatıyla çocuklarımıza aktarıyoruz. Birebir derslerimizde tezene vuruşlarından makamlara kadar milli enstrümanımızın tüm derinliğini işliyoruz. Çocuğunuzun bu toprakların ezgilerini kendi parmaklarıyla canlandırması, ona tarifsiz bir aidiyet duygusu ve sanatsal bir kimlik kazandıracaktır." }
+        };
+        function openModal(id) { 
+            document.getElementById('modal-data').innerHTML = `<h2>${data[id].t}</h2><p>${data[id].p}</p>`;
+            document.getElementById('modal-box').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() { document.getElementById('modal-box').style.display = 'none'; document.body.style.overflow = 'auto'; }
+    </script>
 </body>
 </html>
