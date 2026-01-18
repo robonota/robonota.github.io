@@ -1,180 +1,75 @@
-/* Genel Stil Ayarları */
+/* Genel Ayarlar */
 * {
-    margin: 0; padding: 0; box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #fff;
+body, html {
+    height: 100%;
+    overflow: hidden; /* Kaydırma çubuğunu gizler */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navigasyon */
-header {
-    background: #1a1a1a;
-    color: white;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.logo span { color: #ff6b6b; }
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li { margin-left: 25px; }
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.nav-links a:hover { color: #ff6b6b; }
-
-/* Hero Bölümü */
+/* Hero Bölümü Konumlandırma */
 .hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     color: white;
+    text-align: center;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; }
+/* Video Stili */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Videonun ekranı tam kaplamasını sağlar */
+    z-index: -2;
+}
 
+/* Karartma Katmanı */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Videoyu %40 oranında karartır */
+    z-index: -1;
+}
+
+/* Yazı İçeriği */
+.content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Buton Tasarımı */
 .btn {
-    padding: 12px 30px;
-    border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
-    background: #ff6b6b;
     color: white;
-    display: inline-block;
+    border: 2px solid white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
     transition: 0.3s;
-    margin: 10px;
+    border-radius: 5px;
 }
 
-.btn-alt { background: #4ecdc4; }
-
-.btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-
-/* İçerik Alanları */
-.section-padding { padding: 80px 0; }
-.bg-light { background-color: #f8f9fa; }
-.section-title { text-align: center; margin-bottom: 50px; }
-.section-title h2 { font-size: 2.2rem; color: #1a1a1a; margin-bottom: 10px; }
-
-/* Kartlar */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.info-card {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.info-card i { font-size: 3rem; color: #4ecdc4; margin-bottom: 20px; }
-.info-card.tech i { color: #4ecdc4; }
-
-.info-card:hover { transform: translateY(-10px); }
-
-/* Müzik Listesi */
-.instrument-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.inst-item {
-    background: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.inst-item i { color: #ff6b6b; }
-.inst-item.highlight { background: #ff6b6b; color: white; }
-.inst-item.highlight i { color: white; }
-
-/* Footer */
-footer {
-    background: #1a1a1a;
-    color: white;
-    padding: 60px 0 20px;
-}
-
-.footer-info h3 { margin-bottom: 15px; color: #ff6b6b; }
-.bottom-bar {
-    border-top: 1px solid #333;
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    opacity: 0.6;
-}
-
-/* WhatsApp */
-.whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    z-index: 2000;
-}
-
-/* Mobil Uyumluluk */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero h1 { font-size: 2rem; }
+.btn:hover {
+    background-color: white;
+    color: black;
 }

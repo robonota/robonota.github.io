@@ -3,100 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robonota Akademi | Robotik Kodlama ve Müzik Atölyesi</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Robonota | Hoş Geldiniz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav class="container">
-            <div class="logo">ROBONOTA <span>AKADEMİ</span></div>
-            <ul class="nav-links">
-                <li><a href="#robotik">Robotik Kodlama</a></li>
-                <li><a href="#muzik">Müzik Atölyesi</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <section class="hero">
-        <div class="hero-content">
-            <h1>Gelecek Teknolojide, Ruh Sanatta Şekillenir!</h1>
-            <p>Ankara Batıkent'te çocuklarınız için hem analitik hem de sanatsal gelişim merkezi.</p>
-            <div class="hero-btns">
-                <a href="#robotik" class="btn">Robotik Keşfet</a>
-                <a href="#muzik" class="btn btn-alt">Müziği Keşfet</a>
-            </div>
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="video.mp4" type="video/mp4">
+            Tarayıcınız video oynatmayı desteklemiyor.
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="content">
+            <h1>Robonota'ya Hoş Geldiniz</h1>
+            <p>Hayal ettiğiniz projeler burada hayat buluyor.</p>
+            <a href="#" class="btn">Daha Fazlasını Keşfet</a>
         </div>
     </section>
-
-    <section id="robotik" class="section-padding bg-white">
-        <div class="container">
-            <div class="section-title">
-                <h2>Robotik Kodlama Atölyesi</h2>
-                <p>5-14 yaş arası çocuklar için 3-4 kişilik butik gruplarda, haftada 1 saat yoğun eğitim.</p>
-            </div>
-            <div class="grid-container">
-                <div class="info-card tech">
-                    <i class="fas fa-robot"></i>
-                    <h3>LEGO Projeleri</h3>
-                    <p>LEGO setleri ile mühendislik becerileri ve problem çözme odaklı üretim.</p>
-                </div>
-                <div class="info-card tech">
-                    <i class="fas fa-microchip"></i>
-                    <h3>Arduino</h3>
-                    <p>Temel elektronik ve mikrodenetleyici programlama ile gerçek devre tasarımları.</p>
-                </div>
-                <div class="info-card tech">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobil Uygulama & Oyun</h3>
-                    <p>Kendi mobil oyunlarını ve uygulamalarını tasarlayarak üretmeyi öğrenme.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="muzik" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Müzik Atölyesi</h2>
-                <p>Haftada 1 saat, usta eğitmenlerle birebir (özel) ders formatında müzik eğitimi.</p>
-            </div>
-            <div class="instrument-list">
-                <div class="inst-item"><i class="fas fa-music"></i> Piyano</div>
-                <div class="inst-item"><i class="fas fa-guitar"></i> Gitar</div>
-                <div class="inst-item"><i class="fas fa-wave-square"></i> Keman</div>
-                <div class="inst-item"><i class="fas fa-wind"></i> Klarnet</div>
-                <div class="inst-item"><i class="fas fa-guitar"></i> Saz (Bağlama)</div>
-                <div class="inst-item"><i class="fas fa-leaf"></i> Yan Flüt</div>
-                <div class="inst-item highlight"><i class="fas fa-university"></i> Konservatuvar Hazırlık</div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="iletisim">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <h3>ROBONOTA AKADEMİ</h3>
-                    <p>Teknoloji ve Sanatın Buluşma Noktası</p>
-                    <p><i class="fas fa-phone"></i> 554 191 10 96</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Batıkent, Ankara</p>
-                </div>
-            </div>
-            <div class="bottom-bar">
-                &copy; 2026 Robonota Akademi. Tüm Hakları Saklıdır.
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/905541911096?text=Merhaba, eğitimleriniz hakkında bilgi almak istiyorum." class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>Hızlı Bilgi Al</span>
-    </a>
 
 </body>
 </html>
