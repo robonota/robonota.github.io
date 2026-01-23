@@ -159,3 +159,43 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--font-heading); text-trans
     .wa-btn { width: 60px; height: 60px; bottom: 20px; right: 20px; font-size: 30px; }
     .cursor, .cursor2 { display: none; } /* Mobilde özel imleç kapatılır */
 }
+/* --- ÖZEL NEON İMLEÇ STİLLERİ --- */
+
+/* Masaüstünde standart fareyi gizle */
+@media (pointer: fine) {
+    body { cursor: none !important; }
+    a, button, .accordion-button { cursor: none !important; }
+}
+
+.cursor, .cursor2 {
+    position: fixed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Tıklamaları engellememesi için kritik */
+    z-index: 10000;
+}
+
+/* İçteki Nokta (Neon Mavi) */
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: #00f3ff;
+    box-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+}
+
+/* Dıştaki Halka (Neon Pembe) */
+.cursor2 {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #ff0099;
+    box-shadow: 0 0 15px #ff0099;
+    transition: 0.12s ease-out; /* Takip efekti için hafif gecikme */
+}
+
+/* Mobil ve Tablette Gizle (iOS/Android Uyumu) */
+@media (pointer: coarse) {
+    .cursor, .cursor2 {
+        display: none !important;
+    }
+    body { cursor: auto !important; }
+}
