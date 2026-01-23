@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ROBONOTA | Geleceğin Sanat ve Teknoloji Üssü</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,169 +13,191 @@
 </head>
 <body class="cyber-theme">
 
-    <div class="cursor"></div>
-    <div class="cursor2"></div>
-
     <div id="particles-js"></div>
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand glitch-effect" href="#" data-text="ROBONOTA.">ROBONOTA<span>.</span></a>
-            <button class="navbar-toggler cyber-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="fa fa-bars"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fa fa-bars text-white"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link cyber-link" href="#duality">Atölyeler</a></li>
-                    <li class="nav-item"><a class="nav-link cyber-link" href="#pricing">Fiyatlar</a></li>
-                    <li class="nav-item"><a class="nav-link cyber-link" href="#schedule">Program</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#duality">Atölyeler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Fiyatlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">Merak Edilenler</a></li>
                     <li class="nav-item ms-lg-4">
-                        <a class="btn btn-cyber-primary px-4" href="tel:05541911096">Üsse Bağlan <i class="fas fa-bolt ms-2"></i></a>
+                        <a class="btn btn-cyber-primary" href="tel:05541911096">Üsse Bağlan</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-cyber d-flex align-items-center">
-        <div class="container position-relative z-5">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-10" data-aos="zoom-in">
-                    <h5 class="text-cyber-accent ls-5 mb-3">ANKARA BATIKENT // GELECEK İSTASYONU</h5>
-                    <h1 class="hero-title glitch-effect" data-text="KODLAMA VE SANATIN">KODLAMA VE SANATIN<br> <span class="text-gradient-cyber">SİBER SENFONİSİ</span></h1>
-                    <p class="lead text-white-50 mt-4 mb-5 mx-auto w-75">6–14 yaş arası vizyoner zihinler için tasarlanmış, sınırların olmadığı hibrit bir öğrenme deneyimi. Robotları yönet, notalarla geleceği bestele.</p>
-                    <div class="d-flex justify-content-center gap-4 hero-btns">
-                        <a href="#duality" class="btn btn-cyber-primary btn-lg">Keşfe Başla</a>
-                        <a href="https://wa.me/905541911096" class="btn btn-cyber-outline btn-lg">Whatsapp Hattı</a>
-                    </div>
+    <header class="hero-cyber">
+        <div class="container relative-z">
+            <div class="text-center" data-aos="zoom-in">
+                <h5 class="text-cyber-accent ls-5 mb-3">ANKARA BATIKENT // GELECEK YÜKLENİYOR</h5>
+                <h1 class="hero-title glitch-effect" data-text="KODLAMA VE SANAT">KODLAMA VE SANATIN<br><span class="text-gradient-cyber">SİBER SENFONİSİ</span></h1>
+                <p class="lead text-white-50 mt-4 mb-5 mx-auto max-600">6–14 yaş arası vizyoner zihinler için tasarlanmış, teknoloji ve sanatın kusursuz birleşimi.</p>
+                <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row hero-btns">
+                    <a href="#pricing" class="btn btn-cyber-primary btn-lg px-5">Fiyatları Gör</a>
+                    <a href="https://wa.me/905541911096" class="btn btn-cyber-outline btn-lg px-5">WhatsApp</a>
                 </div>
             </div>
         </div>
-        <div class="hero-overlay-gradient"></div>
     </header>
 
-    <section id="duality" class="section-duality position-relative">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <div class="col-lg-6 cyber-col-blue" data-aos="fade-right">
-                    <div class="cyber-panel p-5 h-100 d-flex flex-column justify-content-center position-relative overflow-hidden">
-                        <i class="fas fa-robot bg-icon-cyber"></i>
-                        <h2 class="cyber-heading text-neon-blue mb-4">MEKANİK ZİHİNLER <br> (ROBOTİK)</h2>
-                        <p class="text-white-70 mb-5">Algoritmaların gücünü donanımla birleştiriyoruz. Geleceğin mühendisleri burada kod yazmıyor, geleceği inşa ediyor.</p>
-                        <ul class="cyber-list list-unstyled">
-                            <li><i class="fas fa-microchip text-neon-blue"></i> <span>Arduino & Elektronik Devreler</span></li>
-                            <li><i class="fab fa-python text-neon-blue"></i> <span>Python ile Yapay Zeka Giriş</span></li>
-                            <li><i class="fas fa-cubes text-neon-blue"></i> <span>LEGO Spike Prime Robotik</span></li>
-                        </ul>
-                        <div class="cyber-glow-blue"></div>
-                    </div>
+    <section id="duality" class="section-duality">
+        <div class="row g-0">
+            <div class="col-lg-6 cyber-col-blue" data-aos="fade-up">
+                <div class="cyber-panel p-5">
+                    <i class="fas fa-robot bg-icon-cyber"></i>
+                    <h2 class="cyber-heading text-neon-blue mb-4">ROBOTİK ÜSSÜ</h2>
+                    <ul class="cyber-list list-unstyled">
+                        <li><i class="fas fa-microchip text-neon-blue"></i> <span>Arduino & Elektronik Tasarım</span></li>
+                        <li><i class="fab fa-python text-neon-blue"></i> <span>Python ile Yapay Zekaya Giriş</span></li>
+                        <li><i class="fas fa-cubes text-neon-blue"></i> <span>LEGO Spike Prime Mühendislik</span></li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 cyber-col-pink" data-aos="fade-left">
-                    <div class="cyber-panel p-5 h-100 d-flex flex-column justify-content-center position-relative overflow-hidden ps-lg-5 border-start-cyber">
-                        <i class="fas fa-music bg-icon-cyber icon-right"></i>
-                        <h2 class="cyber-heading text-neon-pink mb-4">AKUSTİK RUHLAR <br> (MÜZİK)</h2>
-                        <p class="text-white-70 mb-5">Teknolojinin soğukluğunu sanatın sıcaklığıyla kırıyoruz. Notalar, dijital dünyada çocukların yeni dili oluyor.</p>
-                        <ul class="cyber-list list-unstyled">
-                            <li><i class="fas fa-guitar text-neon-pink"></i> <span>Piyano, Keman ve Gitar Eğitimi</span></li>
-                            <li><i class="fas fa-headphones-alt text-neon-pink"></i> <span>Dijital Müzik Prodüksiyonu</span></li>
-                            <li><i class="fas fa-star text-neon-pink"></i> <span>Konservatuvar Hazırlık</span></li>
-                        </ul>
-                        <div class="cyber-glow-pink"></div>
-                    </div>
+            </div>
+            <div class="col-lg-6 cyber-col-pink" data-aos="fade-up">
+                <div class="cyber-panel p-5">
+                    <i class="fas fa-music bg-icon-cyber icon-right"></i>
+                    <h2 class="cyber-heading text-neon-pink mb-4">SANAT ATÖLYESİ</h2>
+                    <ul class="cyber-list list-unstyled">
+                        <li><i class="fas fa-music text-neon-pink"></i> <span>Piyano & Gitar & Keman Eğitimi</span></li>
+                        <li><i class="fas fa-microphone-alt text-neon-pink"></i> <span>Bağlama & Ritim Atölyesi</span></li>
+                        <li><i class="fas fa-graduation-cap text-neon-pink"></i> <span>Konservatuvar Hazırlık</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-5 position-relative z-5">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h5 class="text-cyber-accent ls-3">YATIRIM PLANLARI</h5>
-                <h2 class="cyber-heading fw-bold">EĞİTİM PAKETLERİ</h2>
-            </div>
+    <section id="pricing" class="py-10 bg-darker">
+        <div class="container text-center">
+            <h2 class="cyber-heading mb-5" data-aos="fade-down">EĞİTİM PAKETLERİ</h2>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6" data-aos="flip-left">
-                    <div class="pricing-card glass-morphism text-center">
-                        <div class="card-header-cyber">
-                            <h3 class="mb-0">BAŞLANGIÇ MODÜLÜ</h3>
-                            <p class="small text-neon-blue mb-0">Temel Seviye</p>
-                        </div>
-                        <div class="price-box my-4">
-                            <h2 class="display-4 fw-bold text-white">₺1.500<span class="fs-5 text-white-50">/ay</span></h2>
-                        </div>
-                        <ul class="list-unstyled text-white-70 mb-4 cyber-check-list text-start mx-auto" style="max-width: 250px;">
-                            <li>Haftada 2 Saat Eğitim</li>
-                            <li>Tek Alan Seçimi (Robotik VEYA Müzik)</li>
-                            <li>Temel Materyal Desteği</li>
-                            <li>Katılım Belgesi</li>
+                <div class="col-lg-4" data-aos="flip-up">
+                    <div class="pricing-card glass-morphism">
+                        <h3 class="h4 text-neon-blue">TEKLİ MODÜL</h3>
+                        <p class="small text-white-50">Haftada 1 Gün / Ayda 4 Ders</p>
+                        <div class="price my-4"><span class="h1 fw-bold">₺4.250</span><small>/ay</small></div>
+                        <ul class="list-unstyled text-start small mb-4 cyber-check-list">
+                            <li>Robotik veya Müzik Seçimi</li>
+                            <li>Tüm Ekipmanlar Dahil</li>
                         </ul>
                         <a href="tel:05541911096" class="btn btn-cyber-outline w-100">Kayıt Ol</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="150">
-                    <div class="pricing-card glass-morphism text-center popular-card">
-                        <div class="popular-badge">EN POPÜLER</div>
-                        <div class="card-header-cyber">
-                            <h3 class="mb-0">HİBRİT MUCİT</h3>
-                            <p class="small text-neon-pink mb-0">Tam Donanım</p>
-                        </div>
-                        <div class="price-box my-4">
-                            <h2 class="display-4 fw-bold text-white">₺2.250<span class="fs-5 text-white-50">/ay</span></h2>
-                        </div>
-                        <ul class="list-unstyled text-white-70 mb-4 cyber-check-list text-start mx-auto" style="max-width: 250px;">
-                            <li>Haftada 4 Saat Eğitim</li>
-                            <li>Çift Alan (Robotik VE Müzik)</li>
-                            <li>Tüm Materyaller Dahil</li>
-                            <li>Proje Sergisi Katılımı</li>
+                <div class="col-lg-4" data-aos="flip-up" data-aos-delay="100">
+                    <div class="pricing-card glass-morphism active-border">
+                        <div class="popular-tag">AVANTAJLI</div>
+                        <h3 class="h4 text-neon-pink">HİBRİT / KARDEŞ</h3>
+                        <p class="small text-white-50">Çift Kurs veya İki Kardeş</p>
+                        <div class="price my-4"><span class="h1 fw-bold">₺7.500</span><small>/ay</small></div>
+                        <p class="small text-neon-pink fw-bold">8.500 TL Yerine!</p>
+                        <ul class="list-unstyled text-start small mb-4 cyber-check-list">
+                            <li>Ayda Toplam 8 Ders</li>
+                            <li><b>1.000 TL Net İndirim</b></li>
                         </ul>
-                        <a href="tel:05541911096" class="btn btn-cyber-primary w-100">Kayıt Ol</a>
+                        <a href="tel:05541911096" class="btn btn-cyber-primary w-100 text-white">Kayıt Ol</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="schedule" class="footer-cyber pt-5 position-relative z-5">
-        <div class="container py-5">
+    <section id="gallery" class="py-10">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="cyber-heading">ATÖLYE GALERİSİ</h2>
+            </div>
             <div class="row g-4">
-                <div class="col-lg-4">
-                    <a class="navbar-brand glitch-effect mb-4 d-block" href="#" data-text="ROBONOTA.">ROBONOTA<span>.</span></a>
-                    <p class="text-white-50">Ankara Batıkent'te, teknolojinin soğuk yüzünü sanatın renkleriyle ısıtıyoruz. Geleceği kodlayan nesiller yetiştiriyoruz.</p>
-                    <div class="social-cyber mt-4">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+                    <div class="gallery-item glass-morphism">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=500&q=80" alt="Kodlama">
+                        <div class="gallery-overlay"><span>TEKNOLOJİ</span></div>
                     </div>
                 </div>
-                <div class="col-lg-4 offset-lg-1">
-                    <h4 class="text-white mb-4 cyber-underline">ÇALIŞMA PROGRAMI</h4>
-                    <ul class="list-unstyled text-white-70 schedule-list">
-                        <li class="d-flex justify-content-between border-bottom-cyber py-2 mb-2">
-                            <span><i class="fas fa-calendar-week text-neon-blue me-2"></i> Hafta İçi (Salı-Cuma)</span>
-                            <span class="fw-bold text-neon-pink">15:00 - 20:00</span>
-                        </li>
-                        <li class="d-flex justify-content-between border-bottom-cyber py-2 mb-2">
-                            <span><i class="fas fa-calendar-day text-neon-blue me-2"></i> Hafta Sonu (Cmt-Paz)</span>
-                            <span class="fw-bold text-neon-pink">10:00 - 20:00</span>
-                        </li>
-                         <li class="d-flex justify-content-between py-2 text-muted small">
-                            <span><i class="fas fa-door-closed me-2"></i> Pazartesi</span>
-                            <span>Kapalı</span>
-                        </li>
-                    </ul>
-                    <p class="small text-neon-blue mt-3">*Atölyeler belirtilen saat aralıklarında yaş gruplarına göre planlanmaktadır.</p>
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item glass-morphism">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=500&q=80" alt="Müzik">
+                        <div class="gallery-overlay"><span>SANAT</span></div>
+                    </div>
                 </div>
-                 <div class="col-lg-3">
-                     <h4 class="text-white mb-4 cyber-underline">İLETİŞİM ÜSSÜ</h4>
-                      <ul class="list-unstyled text-white-70 contact-list">
-                        <li><i class="fas fa-phone-alt text-neon-blue"></i> 0554 191 10 96</li>
-                        <li><i class="fas fa-map-marker-alt text-neon-pink"></i> Batıkent, Ankara</li>
-                        <li><i class="fas fa-envelope text-neon-blue"></i> bilgi@robonota.com</li>
-                    </ul>
-                 </div>
+                <div class="col-md-4 col-sm-12" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item glass-morphism">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" alt="Gelecek">
+                        <div class="gallery-overlay"><span>GELECEK</span></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="copyright-cyber text-center py-3">
-            <p class="mb-0 small text-white-50">&copy; 2026 Robonota Akademi. Tüm hakları saklıdır. <span class="text-neon-blue">Gelecek Yükleniyor...</span></p>
+    </section>
+
+    <section id="faq" class="py-10 bg-darker">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="cyber-heading">MERAK EDİLENLER</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="accordion cyber-accordion" id="faqRobonota">
+                        <div class="accordion-item glass-morphism mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                    Kurslara katılım için yaş sınırı nedir?
+                                </button>
+                            </h2>
+                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqRobonota">
+                                <div class="accordion-body text-white-50">
+                                    Programlarımız 6–14 yaş arasındaki çocukların gelişim seviyelerine uygun olarak gruplandırılmıştır.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-morphism mb-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                    Haftada kaç gün eğitim veriliyor?
+                                </button>
+                            </h2>
+                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqRobonota">
+                                <div class="accordion-body text-white-50">
+                                    Akademimiz haftanın 7 günü hizmet vermektedir. Hafta içi 15:00-20:00, hafta sonu ise 10:00-20:00 saatleri arasında atölyelerimiz mevcuttur.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="schedule" class="footer-cyber">
+        <div class="container py-10">
+            <div class="row gy-5">
+                <div class="col-lg-6">
+                    <h4 class="text-neon-blue mb-4">HAFTALIK TAKVİM</h4>
+                    <div class="schedule-box p-4 glass-morphism">
+                        <div class="d-flex justify-content-between mb-3 border-bottom border-white-10 pb-2">
+                            <span>Her Gün (Pazartesi Dahil)</span>
+                            <span class="text-neon-pink fw-bold">15:00 - 20:00</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Hafta Sonu (Cmt-Paz)</span>
+                            <span class="text-neon-pink fw-bold">10:00 - 20:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <h4 class="text-neon-pink mb-4">İLETİŞİM MERKEZİ</h4>
+                    <p class="h2 fw-bold mb-3 text-white">0554 191 10 96</p>
+                    <p class="text-white-50">Batıkent, Ankara</p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -188,38 +210,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        // AOS Başlatma
-        AOS.init({ duration: 1200, once: true });
-
-        // Navbar Scroll Efekti
-        window.addEventListener('scroll', () => {
-            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Particles.js Ayarları (Fütüristik Ağ)
+        AOS.init({ duration: 800, once: true, disable: 'mobile' });
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": ["#00f3ff", "#ff0099"] },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": true },
-                "size": { "value": 3, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
-                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } } }
-            },
-            "retina_detect": true
-        });
-
-        // Özel İmleç Efekti
-        const cursor = document.querySelector('.cursor');
-        const cursor2 = document.querySelector('.cursor2');
-        document.addEventListener('mousemove', e => {
-            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+                "number": { "value": 30 },
+                "color": { "value": "#00f3ff" },
+                "line_linked": { "enable": true, "opacity": 0.1 },
+                "move": { "enable": true, "speed": 1.2 }
+            }
         });
     </script>
 </body>
