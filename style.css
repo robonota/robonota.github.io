@@ -1,83 +1,326 @@
-/* AGASYTA INSPIRED DESIGN SYSTEM */
+/* --- GENEL AYARLAR VE TİPOGRAFİ --- */
 :root {
-    --primary: #0056b3; /* Güven veren kurumsal mavi */
-    --secondary: #ffc107; /* Dikkat çeken sarı/gold */
-    --text: #333333;
+    --primary-color: #3a0ca3; /* Koyu Mavi/Mor */
+    --secondary-color: #4361ee; /* Parlak Mavi */
+    --accent-color: #f72585; /* Canlı Pembe/Turuncu Vurgu */
+    --dark-bg: #10002b; /* Çok Koyu Arka Plan */
     --light-bg: #f8f9fa;
-    --white: #ffffff;
-    --border: #e9ecef;
+    --gradient-main: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    --gradient-hover: linear-gradient(135deg, var(--accent-color), var(--primary-color));
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-body { font-family: 'Open Sans', sans-serif; color: var(--text); line-height: 1.6; overflow-x: hidden; }
+body {
+    font-family: 'Poppins', sans-serif; /* Modern Yazı Tipi */
+    overflow-x: hidden;
+    color: #444;
+}
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
 
-/* NAV */
-header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
-.nav-box { height: 80px; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.5rem; color: var(--primary); letter-spacing: -1px; }
-.nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
-.nav-links a { text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 600; }
-.btn-nav { background: var(--primary); color: var(--white) !important; padding: 10px 20px; border-radius: 6px; }
+.text-accent {
+    color: var(--accent-color) !important;
+}
 
-/* HERO */
-.hero { padding: 80px 0; background: var(--white); }
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.hero-text h1 { font-family: 'Poppins', sans-serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; color: #1a1a1a; }
-.hero-text p { font-size: 1.2rem; color: #555; margin-bottom: 40px; }
-.hero-btns { display: flex; gap: 15px; }
-.btn-primary { background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 700; }
-.btn-secondary { border: 2px solid var(--primary); color: var(--primary); padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 700; }
-.hero-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.bg-darker {
+    background-color: #0a041c;
+}
 
-/* SECTIONS */
-.section-padding { padding: 100px 0; }
-.bg-light { background: var(--light-bg); }
-.section-tag { color: var(--primary); font-weight: 800; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 15px; display: block; }
-.section-h2 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-bottom: 40px; }
+.ls-2 {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
 
-/* CARDS */
-.course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.course-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); cursor: pointer; transition: 0.3s; }
-.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-.course-card img { width: 100%; height: 200px; object-fit: cover; }
-.c-body { padding: 25px; }
-.c-body h3 { font-family: 'Poppins', sans-serif; margin-bottom: 10px; }
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
 
-/* VALUE PROPOSITION */
-.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 60px; }
-.v-item i { font-size: 3rem; color: var(--secondary); margin-bottom: 20px; }
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-main);
+    border-radius: 2px;
+}
 
-/* PRICE */
-.price-wrapper { display: flex; justify-content: center; gap: 30px; }
-.p-card { background: var(--white); padding: 40px; border-radius: 12px; text-align: center; border: 1px solid var(--border); flex: 1; max-width: 400px; position: relative; }
-.p-card.highlighted { border: 3px solid var(--primary); }
-.p-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
-.p-cost { font-size: 3rem; font-weight: 700; margin: 20px 0; color: var(--primary); }
-.p-cost span { font-size: 1rem; color: #888; }
+.text-start.section-title::after {
+    left: 0;
+    transform: none;
+}
 
-/* FOOTER */
-footer { background: #1a1a1a; color: white; padding: 80px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; }
-.f-socials i { font-size: 1.5rem; margin-right: 20px; color: var(--white); }
-.f-bottom { border-top: 1px solid #333; margin-top: 60px; padding-top: 30px; text-align: center; font-size: 0.8rem; opacity: 0.5; }
 
-/* MODAL (iOS FIX) */
-.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; }
-.modal-content { background: var(--white); padding: 40px; border-radius: 12px; max-width: 700px; width: 100%; position: relative; }
-.close-x { position: absolute; top: 15px; right: 20px; font-size: 35px; cursor: pointer; color: #888; }
+/* --- NAVBAR (Menü) --- */
+.navbar {
+    transition: all 0.4s ease;
+    padding: 1.2rem 0;
+    background: transparent;
+}
 
-/* MOBILE (iOS Standard) */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero-grid { grid-template-columns: 1fr; text-align: center; }
-    .hero-text h1 { font-size: 2.2rem; }
-    .hero-btns { justify-content: center; }
-    .value-grid { grid-template-columns: 1fr; }
-    .price-wrapper { flex-direction: column; align-items: center; }
-    .footer-grid { grid-template-columns: 1fr; }
-}/* WhatsApp Floating Button */
+.navbar.scrolled {
+    background: rgba(16, 0, 43, 0.95); /* Koyu yarı saydam arka plan */
+    padding: 0.8rem 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .navbar .active {
+    color: var(--accent-color) !important;
+}
+
+/* --- BUTONLAR --- */
+.btn-accent {
+    background: var(--gradient-main);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background: var(--gradient-hover);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -10px rgba(247, 37, 133, 0.5);
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+
+/* --- HERO BÖLÜMÜ (Ana Ekran) --- */
+.hero-section {
+    position: relative;
+    /* Yeni, daha teknolojik ve sanatsal bir arka plan görseli */
+    background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 100vh;
+    min-height: 700px;
+    margin-top: -76px; /* Navbar'ın altına girmesi için */
+    overflow: hidden;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Görselin üzerine modern bir gradyan katmanı */
+    background: linear-gradient(135deg, rgba(58, 12, 163, 0.85), rgba(247, 37, 133, 0.75));
+    z-index: 1;
+}
+
+.relative-z {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    letter-spacing: -2px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-slogan {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* Dalga Efekti */
+.wave-bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 2;
+}
+
+.wave-top-inverse {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+
+/* --- ÖZELLİK KARTLARI (Neden Robonota) --- */
+.section-features {
+    padding-top: 80px;
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    border-color: var(--accent-color);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-box {
+    background: var(--gradient-main) !important;
+    color: white !important;
+}
+
+
+/* --- GÖRSEL SÜSLEMELER (Blobs & Patterns) --- */
+.blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-main);
+    opacity: 0.1;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: 1;
+    animation: blobAni 10s ease-in-out infinite alternate;
+}
+
+.blob-1 {
+    top: -50px;
+    left: -50px;
+}
+
+.blob-2 {
+    bottom: -50px;
+    right: -50px;
+    background: var(--accent-color);
+    opacity: 0.15;
+}
+
+@keyframes blobAni {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.bg-pattern-music {
+    position: absolute;
+    top: 0; left:0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 1;
+}
+
+.music-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+
+/* --- FOOTER --- */
+.footer-info p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 1rem;
+    color: white;
+    margin-right: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;
+}
+
+.footer-links h4::after, .footer-contact h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    padding: 10px 0;
+}
+
+.footer-links ul li a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.footer-links ul li a:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-contact p {
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+}
+
+.copyright-section {
+    background: #050010;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.copyright {
+    color: rgba(255,255,255,0.7);
+}
+
+
+/* --- WHATSAPP BUTONU (Önceki korunuyor) --- */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -103,18 +346,22 @@ footer { background: #1a1a1a; color: white; padding: 80px 0 30px; }
     color: #FFF;
     transform: scale(1.1);
 }
+.my-float { margin-top: 0; }
 
-.my-float {
-    margin-top: 0;
+
+/* --- MOBİL UYUMLULUK AYARLARI --- */
+@media (max-width: 991px) {
+    .hero-title { font-size: 3rem; }
+    .hero-slogan { font-size: 1.5rem; }
+    .navbar { background: rgba(16, 0, 43, 0.95); padding: 0.8rem 0; }
+    .section-title.text-start::after { left: 50%; transform: translateX(-50%); }
+    .section-title.text-start { text-align: center !important; width: 100%; }
+    #robotik .text-start, #muzik .text-start { text-align: center !important; }
+    .blob { display: none; } /* Mobilde süslemeleri gizle */
+    .hero-section { height: auto; padding: 150px 0 100px 0; }
 }
 
-/* Mobil cihazlar için butonu biraz küçültelim */
-@media screen and (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 25px;
-    }
+@media (max-width: 768px) {
+    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 25px; }
+    .hero-title { font-size: 2.5rem; }
 }
