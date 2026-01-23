@@ -1,121 +1,116 @@
-/* --- TEMEL AYARLAR --- */
+/* --- TASARIM SİSTEMİ --- */
 :root {
     --primary: #4361ee;
-    --secondary: #3f37c9;
     --accent: #f72585;
-    --dark: #0b090a;
-    --bg-light: #fdfdfe;
+    --dark: #10002b;
+    --text-main: #2b2d42;
+    --shadow: 0 10px 40px rgba(0,0,0,0.08);
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: #333;
-    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-main);
+    background-color: #fff;
 }
 
-h1, h2, h3, .navbar-brand {
-    font-family: 'Poppins', sans-serif;
-}
-
-.fw-800 { font-weight: 800; }
-.py-10 { padding-top: 6rem; padding-bottom: 6rem; }
+.fw-black { font-weight: 900; font-family: 'Montserrat', sans-serif; }
+.ls-3 { letter-spacing: 3px; }
+.py-10 { padding: 8rem 0; }
 
 /* --- NAVBAR --- */
-.navbar {
-    padding: 25px 0;
-    transition: 0.4s;
-    background: transparent;
-}
-
+.navbar { padding: 30px 0; z-index: 1000; }
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.9) !important;
+    background: rgba(16, 0, 43, 0.9);
+    backdrop-filter: blur(20px);
     padding: 15px 0;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.navbar.scrolled .nav-link, .navbar.scrolled .navbar-brand {
-    color: var(--dark) !important;
-}
-
+.navbar-brand { font-size: 1.8rem; color: #fff !important; }
 .navbar-brand span { color: var(--accent); }
-.nav-link { font-weight: 600; color: #fff !important; margin: 0 10px; }
+.nav-link { color: rgba(255,255,255,0.8) !important; font-weight: 600; margin: 0 10px; }
+.nav-link:hover { color: var(--accent) !important; }
 
-/* --- HERO BÖLÜMÜ --- */
-.hero-main {
+/* --- HERO --- */
+.hero-wrap {
     height: 100vh;
-    background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') center/cover;
+    min-height: 700px;
+    background: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1920&q=80') center/cover;
     position: relative;
-    margin-top: -100px;
+    margin-top: -110px;
 }
 
-.hero-overlay {
+.hero-bg-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(11, 9, 10, 0.9), rgba(67, 97, 238, 0.4));
-    z-index: 1;
+    background: linear-gradient(135deg, rgba(16, 0, 43, 0.9), rgba(67, 97, 238, 0.4));
 }
 
-.relative-z { position: relative; z-index: 10; }
-
-.btn-xl { padding: 18px 45px; font-weight: 700; font-size: 1.1rem; }
-.btn-primary { background: var(--primary); border: none; }
+.btn-xl { padding: 20px 45px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.btn-gradient { background: linear-gradient(45deg, var(--primary), var(--accent)); color: #fff; border: none; }
 
 /* --- PROGRAM KARTLARI --- */
-.program-card {
-    transition: 0.5s;
+.glass-panel {
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    transition: 0.4s;
+}
+
+.glass-panel:hover { transform: translateY(-15px); }
+.border-start-primary { border-left: 8px solid var(--primary); }
+.border-start-accent { border-left: 8px solid var(--accent); }
+
+.schedule-icon {
+    width: 60px; height: 60px;
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+}
+
+.bg-primary-soft { background: #eef2ff; }
+.bg-accent-soft { background: #fff0f6; }
+
+/* --- GÖRSEL EFEKTLER --- */
+.img-stagger-wrap { position: relative; }
+.main-img { border-radius: 40px; }
+.floating-stat {
+    position: absolute;
+    bottom: -30px; right: 20px;
+    min-width: 150px; text-align: center;
     border: 1px solid rgba(0,0,0,0.05);
 }
 
-.tech-card { background: var(--bg-light); border-bottom: 5px solid var(--primary); }
-.music-card { background: linear-gradient(135deg, var(--dark), var(--secondary)); border-bottom: 5px solid var(--accent); }
-
-.icon-circle {
-    width: 80px; height: 80px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-}
-
-.program-card:hover {
-    transform: translateY(-20px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.1) !important;
-}
-
-.custom-list li { margin-bottom: 15px; display: flex; align-items: center; }
-.custom-list i { margin-right: 12px; font-size: 1.2rem; color: var(--primary); }
-
-/* --- WHATSAPP & ANİMASYON --- */
-.floating-whatsapp {
-    position: fixed;
-    width: 65px; height: 65px;
+/* --- WHATSAPP --- */
+.wa-btn {
+    position: fixed; width: 70px; height: 70px;
     bottom: 40px; right: 40px;
-    background: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 32px;
-    z-index: 1000;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    background: #25d366; color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 35px; z-index: 1000; text-decoration: none;
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
 }
 
-.pulse {
-    position: absolute;
-    width: 100%; height: 100%;
-    background: #25d366;
-    border-radius: 50%;
-    z-index: -1;
-    animation: pulse-ani 2s infinite;
+.wa-pulse {
+    position: absolute; width: 100%; height: 100%;
+    background: #25d366; border-radius: 50%;
+    z-index: -1; animation: wa-pulse-ani 2s infinite;
 }
 
-@keyframes pulse-ani {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.8); opacity: 0; }
+@keyframes wa-pulse-ani {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(2); opacity: 0; }
 }
 
-/* --- MOBİL --- */
+/* --- RESPONSIVE (TÜM CİHAZLAR) --- */
 @media (max-width: 991px) {
-    .navbar { background: var(--dark); }
-    .hero-main { height: auto; padding: 180px 0 100px; text-align: center; }
-    .stats-bar .border-end { border-end: none !important; }
+    .navbar { background: var(--dark) !important; padding: 15px 0; }
+    .hero-wrap { height: auto; padding: 180px 0 100px; text-align: center; }
+    .py-10 { padding: 5rem 0; }
+    .display-2 { font-size: 3.5rem; }
+}
+
+@media (max-width: 576px) {
+    .display-2 { font-size: 2.5rem; }
+    .wa-btn { width: 60px; height: 60px; bottom: 20px; right: 20px; font-size: 30px; }
 }
