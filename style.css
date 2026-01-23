@@ -1,9 +1,8 @@
-/* --- CYBER CORE & IOS FIXES --- */
+/* --- CYBER CORE --- */
 :root {
     --neon-blue: #00f3ff;
     --neon-pink: #ff0099;
     --cyber-dark: #050510;
-    --cyber-darker: #020205;
 }
 
 body {
@@ -15,37 +14,33 @@ body {
     margin: 0;
 }
 
-h1, h2, h3, .navbar-brand { font-family: 'Orbitron', sans-serif; text-transform: uppercase; }
+h1, h2, h3, .navbar-brand { font-family: 'Orbitron', sans-serif; letter-spacing: 2px; }
 
-/* iOS Blur & Glassmorphism */
-.glass-morphism {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* iOS Safari Fix */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 2rem;
-}
-
-/* --- HERO SECTION --- */
+/* --- IOS & SAFARI OPTİMİZASYONU --- */
 .hero-cyber {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: linear-gradient(rgba(5,5,16,0.85), rgba(5,5,16,0.85)), 
-                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+                url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* iOS Fix */
+    background-attachment: scroll; /* iOS "fixed" hatasını önler */
 }
 
-.hero-title { font-size: clamp(2.2rem, 6vw, 4.5rem); font-weight: 900; }
-.text-gradient-cyber {
-    background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+/* Safari için Blur Desteği */
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* IOS KRİTİK KOMUT */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: 0.3s ease;
 }
 
-/* --- DUALITY SECTION --- */
+/* --- ATÖLYE PANELLERİ --- */
 .cyber-panel {
     min-height: 450px;
     display: flex;
@@ -55,41 +50,34 @@ h1, h2, h3, .navbar-brand { font-family: 'Orbitron', sans-serif; text-transform:
     overflow: hidden;
 }
 
-.cyber-col-blue { background: rgba(0, 243, 255, 0.03); border-bottom: 5px solid var(--neon-blue); }
-.cyber-col-pink { background: rgba(255, 0, 153, 0.03); border-bottom: 5px solid var(--neon-pink); }
+.cyber-col-blue { background: rgba(0, 243, 255, 0.03); border-bottom: 4px solid var(--neon-blue); }
+.cyber-col-pink { background: rgba(255, 0, 153, 0.03); border-bottom: 4px solid var(--neon-pink); }
 
-.bg-icon-cyber {
-    position: absolute; font-size: 15rem; opacity: 0.05; top: 50%; left: 50%;
-    transform: translate(-50%, -50%); z-index: -1;
-}
+.cyber-list li { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; }
+.cyber-list i { margin-right: 15px; font-size: 1.3rem; }
 
 /* --- BUTONLAR --- */
 .btn-cyber-primary {
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
-    border: none; color: white !important; border-radius: 50px; font-family: 'Orbitron';
-    padding: 15px 35px; font-weight: bold; box-shadow: 0 0 15px var(--neon-blue);
+    border: none; color: white !important; padding: 14px 35px; font-family: 'Orbitron';
+    border-radius: 50px; font-weight: bold;
 }
 
 .btn-cyber-outline {
     border: 2px solid var(--neon-blue); color: var(--neon-blue) !important;
-    background: transparent; border-radius: 50px; font-family: 'Orbitron';
-    padding: 15px 35px; transition: 0.3s;
+    padding: 14px 35px; font-family: 'Orbitron'; background: transparent;
+    border-radius: 50px;
 }
 
-.btn-cyber-outline:hover { background: var(--neon-blue); color: var(--cyber-dark) !important; }
-
-/* --- GALERİ & SSS --- */
-.gallery-item { height: 280px; overflow: hidden; position: relative; padding: 0 !important; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-.gallery-overlay {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: 0.3s;
+/* --- FİYATLANDIRMA --- */
+.pricing-card { position: relative; }
+.popular-tag {
+    background: var(--neon-pink); font-size: 0.75rem; padding: 6px 18px;
+    position: absolute; top: -15px; right: 20px; border-radius: 50px;
+    box-shadow: 0 0 15px var(--neon-pink); font-weight: bold;
 }
-.gallery-item:hover .gallery-overlay { opacity: 1; }
 
-.cyber-accordion .accordion-button { background: transparent; color: white; border: none; font-family: 'Orbitron'; font-size: 0.9rem; }
-.cyber-accordion .accordion-button:not(.collapsed) { color: var(--neon-blue); }
+.active-border { border-color: var(--neon-pink); box-shadow: 0 0 25px rgba(255, 0, 153, 0.15); }
 
 /* --- WHATSAPP --- */
 .wa-btn {
@@ -103,15 +91,12 @@ h1, h2, h3, .navbar-brand { font-family: 'Orbitron', sans-serif; text-transform:
 }
 @keyframes wa-pulse-ani { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(2.2); opacity: 0; } }
 
-/* --- DİĞER --- */
-.py-10 { padding: 6rem 0; }
-.bg-darker { background-color: var(--cyber-darker); }
-.popular-tag { background: var(--neon-pink); font-size: 0.7rem; padding: 5px 15px; border-radius: 50px; position: absolute; top: 15px; right: 15px; }
-.active-border { border-color: var(--neon-pink); }
-#particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
-
+/* --- MOBİL UYUMLULUK --- */
 @media (max-width: 991px) {
+    .hero-title { font-size: 2.2rem; }
+    .cyber-panel { padding: 4rem 2rem !important; min-height: auto; }
+    .py-10 { padding: 4rem 0; }
     .navbar { background: var(--cyber-dark) !important; padding: 10px 0; }
-    .hero-cyber { height: auto; padding: 150px 0 100px; }
-    .cyber-panel { min-height: auto; padding: 3rem 1.5rem !important; }
 }
+
+#particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
