@@ -1,134 +1,121 @@
-/* --- DEĞİŞKENLER --- */
+/* --- TEMEL AYARLAR --- */
 :root {
     --primary: #4361ee;
+    --secondary: #3f37c9;
     --accent: #f72585;
-    --dark: #0f0c29;
-    --bg-light: #f8f9fa;
+    --dark: #0b090a;
+    --bg-light: #fdfdfe;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
+    color: #333;
     overflow-x: hidden;
 }
 
+h1, h2, h3, .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+}
+
+.fw-800 { font-weight: 800; }
+.py-10 { padding-top: 6rem; padding-bottom: 6rem; }
+
 /* --- NAVBAR --- */
 .navbar {
+    padding: 25px 0;
     transition: 0.4s;
+    background: transparent;
 }
 
-.btn-accent {
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    transition: 0.3s;
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 15px 0;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.btn-accent:hover {
-    background-color: #d61c71;
-    color: white;
-    transform: translateY(-2px);
+.navbar.scrolled .nav-link, .navbar.scrolled .navbar-brand {
+    color: var(--dark) !important;
 }
 
-/* --- HERO SECTION (BEYAZ EKRAN ÇÖZÜMÜ) --- */
-.hero-section {
-    position: relative;
+.navbar-brand span { color: var(--accent); }
+.nav-link { font-weight: 600; color: #fff !important; margin: 0 10px; }
+
+/* --- HERO BÖLÜMÜ --- */
+.hero-main {
     height: 100vh;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Görsel yüklenmezse diye koyu arka plan rengi */
-    background-color: var(--dark) !important; 
-    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    margin-top: -85px;
+    background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') center/cover;
+    position: relative;
+    margin-top: -100px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(11, 9, 10, 0.9), rgba(67, 97, 238, 0.4));
     z-index: 1;
 }
 
-/* Karartma Katmanı: Yazıların beyaz üzerine gelmesini engeller */
-.hero-section .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(15, 12, 41, 0.7); /* Koyu perde */
-    z-index: 2;
+.relative-z { position: relative; z-index: 10; }
+
+.btn-xl { padding: 18px 45px; font-weight: 700; font-size: 1.1rem; }
+.btn-primary { background: var(--primary); border: none; }
+
+/* --- PROGRAM KARTLARI --- */
+.program-card {
+    transition: 0.5s;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.relative-z {
-    position: relative;
-    z-index: 10 !important; /* Yazıları ve butonları en üste çeker */
-    color: #ffffff !important;
+.tech-card { background: var(--bg-light); border-bottom: 5px solid var(--primary); }
+.music-card { background: linear-gradient(135deg, var(--dark), var(--secondary)); border-bottom: 5px solid var(--accent); }
+
+.icon-circle {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
 }
 
-.hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    color: #ffffff !important;
+.program-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.1) !important;
 }
 
-.hero-slogan {
-    font-size: clamp(1.2rem, 4vw, 2rem);
-    color: #f8f9fa !important;
-    font-weight: 300;
-}
+.custom-list li { margin-bottom: 15px; display: flex; align-items: center; }
+.custom-list i { margin-right: 12px; font-size: 1.2rem; color: var(--primary); }
 
-/* --- BÖLÜMLER --- */
-.section-title {
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    left: 50%; bottom: 0;
-    transform: translateX(-50%);
-    width: 60px; height: 4px;
-    background: var(--accent);
-}
-
-.text-start.section-title::after {
-    left: 0; transform: none;
-}
-
-.feature-card {
-    transition: 0.3s;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-}
-
-.bg-darker {
-    background-color: #08061a;
-}
-
-/* --- WHATSAPP BUTONU --- */
-.whatsapp-float {
+/* --- WHATSAPP & ANİMASYON --- */
+.floating-whatsapp {
     position: fixed;
-    width: 60px; height: 60px;
-    bottom: 30px; right: 30px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 65px; height: 65px;
+    bottom: 40px; right: 40px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
     z-index: 1000;
     text-decoration: none;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    color: white;
+.pulse {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: #25d366;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse-ani 2s infinite;
 }
 
-/* --- MOBİL AYARLAR --- */
+@keyframes pulse-ani {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* --- MOBİL --- */
 @media (max-width: 991px) {
-    .navbar { background-color: var(--dark) !important; }
-    .hero-section { height: auto; padding: 150px 0 100px; }
-    .section-title::after { left: 50% !important; transform: translateX(-50%) !important; }
-    .text-start { text-align: center !important; }
+    .navbar { background: var(--dark); }
+    .hero-main { height: auto; padding: 180px 0 100px; text-align: center; }
+    .stats-bar .border-end { border-end: none !important; }
 }
